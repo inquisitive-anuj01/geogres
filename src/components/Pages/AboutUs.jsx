@@ -26,10 +26,10 @@ const AboutUs = () => {
           className="space-y-6 text-lg leading-relaxed"
         >
           <p>
-            Senzo, from the house of innovation, is one of the leading tile
+            GeoGres, from the house of innovation, is one of the leading tile
             adhesive and construction solutions companies in India. We are
             committed to providing our customers with cutting-edge tile and
-            stone fixing solutions. Senzo products are technologically advanced,
+            stone fixing solutions. GeoGres products are technologically advanced,
             blending global expertise with local intelligence.
           </p>
 
@@ -37,7 +37,7 @@ const AboutUs = () => {
             Our commitment lies in continual innovation, consistency, and
             excellence. With state-of-the-art infrastructure across multiple
             plants, we ensure superior quality, reliability, and prompt service
-            - making Senzo a trusted industry leader. All our products strictly
+            - making GeoGres a trusted industry leader. All our products strictly
             adhere to both Indian and European technical standards.
           </p>
 
@@ -51,7 +51,7 @@ const AboutUs = () => {
           </p>
 
           <p>
-            At Senzo, we believe in creating long-lasting solutions. We
+            At GeoGres, we believe in creating long-lasting solutions. We
             collaborate with architects and applicators to spread awareness about
             best global practices. Through our training programs, we ensure
             applicators and contractors across the country achieve perfection in

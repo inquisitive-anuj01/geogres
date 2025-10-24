@@ -95,7 +95,7 @@ const Footer = () => {
         >
           <img
             src={logo}
-            alt="Senzo Logo"
+            alt="GeoGres Logo"
             className="h-25 w-auto cursor-pointer"
           />
         </motion.div>
@@ -266,10 +266,10 @@ const Footer = () => {
                 <polyline points="22,6 12,13 2,6"></polyline>
               </svg>
               <a
-                href="mailto:info@senzo.co.in"
+                href="mailto:info@geogres.co.in"
                 className="hover:text-white transition-colors duration-300"
               >
-                info@senzo.co.in
+                info@geogres.co.in
               </a>
             </motion.div>
           </div>
@@ -287,7 +287,7 @@ const Footer = () => {
         <hr className="border-gray-700 mb-6" />
         <div className="flex flex-col sm:flex-row items-center justify-between text-center sm:text-left space-y-4 sm:space-y-0">
           <p className="text-gray-500 text-sm">
-            &copy; {new Date().getFullYear()} Senzo. All rights reserved.
+            &copy; {new Date().getFullYear()} GeoGres. All rights reserved.
           </p>
 
           <p className="text-gray-400 text-sm ">

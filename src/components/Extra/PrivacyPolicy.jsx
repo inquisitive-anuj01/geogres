@@ -25,7 +25,7 @@ const PrivacyPolicy = () => {
           className="space-y-6 text-lg leading-relaxed"
         >
           <p>
-            At Senzo, we are committed to protecting your privacy. This policy outlines how we collect, use, and safeguard your personal information when you visit our website.
+            At GeoGres, we are committed to protecting your privacy. This policy outlines how we collect, use, and safeguard your personal information when you visit our website.
           </p>
 
           <h2 className="text-2xl font-bold text-black mt-8 mb-4">1. Information We Collect</h2>
@@ -35,7 +35,7 @@ const PrivacyPolicy = () => {
 
           <h2 className="text-2xl font-bold text-black mt-8 mb-4">2. How We Use Collected Information</h2>
           <p>
-            Senzo may collect and use your personal information for the following purposes:
+            GeoGres may collect and use your personal information for the following purposes:
           </p>
           <ul className="list-disc list-inside space-y-2">
             <li>To improve customer service.</li>

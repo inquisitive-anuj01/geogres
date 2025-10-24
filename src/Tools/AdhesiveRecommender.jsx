@@ -7,7 +7,7 @@ const tileAdhesiveProducts = [
   {
     id: 1,
     name: "Tile Adhesive for Ceramic & Vitrified Tiles",
-    image: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1757146318/S-11_gajeor.png",
+    image: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761301927/G-11_id8llm.png",
     description:
       "Polymer fibre modified grey cement based adhesive with no vertical slip, suitable for fixing ceramic and Gres tiles for floors and walls in internal applications",
     usage: "Tile Adhesive for Interior floor Applications",
@@ -24,14 +24,14 @@ const tileAdhesiveProducts = [
     characteristics:
       "For Gres and vitrified tiles, Control tile slippage ceramic tiles, Application up to 10mm, Prolonged workability, Adjustable surfaces, Excellent workability plaster cement ground coat",
     scope:
-      "SENZO S-11 is a tile adhesive designed for Gres tiles and glazed terracotta, Indoor use, On horizontal and vertical, On cement and cement-lime, Cement screeds and concrete",
-    itemNo: "S-11",
+      "GeoGres G-11 is a tile adhesive designed for Gres tiles and glazed terracotta, Indoor use, On horizontal and vertical, On cement and cement-lime, Cement screeds and concrete",
+    itemNo: "G-11",
     type: "Standard Recommendation",
   },
   {
     id: 2,
     name: "Polymer Modified Improved Tile Adhesive",
-    image: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1757146320/S-21_onlbrd.png",
+    image: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761302110/G-21_ypcger.png",
     usage: "Tile Adhesive for Interior floor and walll Applications",
     bg: "#E0D45A",
     description:
@@ -48,14 +48,14 @@ const tileAdhesiveProducts = [
     characteristics:
       "Perfect adherence adhesive, Allows installation of tiles from top towards the bottom, Ideal for new tile flooring surfaces, Application up to 10mm plaster, Smooth & Creamy ground coats, Extended open time",
     scope:
-      "SENZO S-21 is a tile adhesive designed for vitrified tiles and glazed terracotta, Indoor use,On horizontal and vertical, On cement and cement-lime, Cement screeds and concrete",
-    itemNo: "S-21",
+      "GeoGres G-21 is a tile adhesive designed for vitrified tiles and glazed terracotta, Indoor use,On horizontal and vertical, On cement and cement-lime, Cement screeds and concrete",
+    itemNo: "G-21",
     type: "Best Recommendation",
   },
   {
     id: 3,
     name: "POLYMER MODIFIED TILE & STONE ADHESIVE",
-    image: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1757146320/S-31_gesscu.png",
+    image: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761302004/G-31_hbt9km.png",
     usage: "Tile Adhesive for interior & Exterior floor and wall Applications",
     bg: "#ECAD48",
     description:
@@ -72,14 +72,14 @@ const tileAdhesiveProducts = [
     characteristics:
       "For ceramic vitrified (semi and fully) tiles glass mosaic and natural stone (non-sensitive)., On balconies terraces wet rooms and bathrooms., Oa water proof and moisture proof layers For inside and outside use, Longer open time for safer application, Application Up to 12mm., For Tile on Tile application",
     scope:
-      "SENZO S-31 adhesive mortar for layramic tile  vitrified (semi and fully) tiles and al stone (non sensitive & color fast),Indoors and Outdoors.,Senzo S-31mortars can be used in room exposed to water.,It is recommended for floors with elevated functional loads in shopping malls staircas.",
-    itemNo: "S-31",
+      "GeoGres G-31 adhesive mortar for layramic tile  vitrified (semi and fully) tiles and al stone (non sensitive & color fast),Indoors and Outdoors.,GeoGres G-31 mortars can be used in room exposed to water.,It is recommended for floors with elevated functional loads in shopping malls staircas.",
+    itemNo: "G-31",
     type: "Best Recommendation",
   },
   {
     id: 4,
     name: "DEFORMABLE TILE & STONE ADHESIVE",
-    image: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1757146320/S-41_ppe6yv.png",
+    image: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761301915/G-41_jt7rqq.png",
     usage:
       "Tile Adhesive for underwater, Interior & Exterior floor and wall Applications for Medium and Heavy tiles and stones",
     bg: "#CB5533",
@@ -97,14 +97,14 @@ const tileAdhesiveProducts = [
     characteristics:
       "With visible fibres for strength and flexibility balancing substrate deformations on critical surfaces like balconies terraces wet rooms bathrooms swimming pool and external facade etc., For ceramic vitrified tiles (semi and fully) glass mosaic and natural stone (non-sensitive), Suitable for large scale and heavy duty vitrified tiles",
     scope:
-      "SENZO S-41 is used to laying vitrified tilles (semi and fully) cement and stone tihus large format and heavy duty tiles thin tiles., Its features keep elastic connection with substrate which allowed to carry over shear stresses between tile and substrate., On horizontal and vertical surface - Polymer Modified Bonds with various substrates",
-    itemNo: "S-41",
+      "GeoGres G-41 is used to laying vitrified tilles (semi and fully) cement and stone tihus large format and heavy duty tiles thin tiles., Its features keep elastic connection with substrate which allowed to carry over shear stresses between tile and substrate., On horizontal and vertical surface - Polymer Modified Bonds with various substrates",
+    itemNo: "G-41",
     type: "Premium Recommendation",
   },
   {
     id: 5,
     name: "HIGHLY DEFORMABLE TILE & STONE ADHESIVE",
-    image: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1757146320/S-51_yl5yjh.png",
+    image: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761301908/G-51_tghymx.png",
     usage: "Tile Adhesive for Interior & Exterior Facade for Medium and Heavy tiles and stones.",
     bg: "#75BCD7",
     description:
@@ -121,8 +121,8 @@ const tileAdhesiveProducts = [
     characteristics:
       "For use on difficult substrates, For tile and stones of size more than 1200 x 1200 mm, For indoor and Outdoor use, Application up to 15mm",
     scope:
-      "SENZO S-51 is used to laying vitrified tiles (semi and fully) cement and stone tiles large format and heavy duty tiles thin tiles., Its features keep elastic connection with substrate which allowed to carry over shear stresses between tile and substrate., On horizontal and vertical surfaces",
-    itemNo: "S-51",
+      "GeoGres G-51 is used to laying vitrified tiles (semi and fully) cement and stone tiles large format and heavy duty tiles thin tiles., Its features keep elastic connection with substrate which allowed to carry over shear stresses between tile and substrate., On horizontal and vertical surfaces",
+    itemNo: "G-51",
     type: "Premium Recommendation",
   },
 ]

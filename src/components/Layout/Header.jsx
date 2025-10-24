@@ -218,7 +218,7 @@ const Header = () => {
                 >
                   <img
                     src={logo || "/placeholder.svg"}
-                    alt="Senzo Logo"
+                    alt="GeoGres Logo"
                     className="h-20 w-auto"
                   />
                 </div>
@@ -466,7 +466,7 @@ const Header = () => {
               <div className="flex items-center justify-between p-4 border-b border-gray-200 py-10">
                 <img
                   src={logo || "/placeholder.svg"}
-                  alt="Senzo Logo"
+                  alt="GeoGres Logo"
                   className="h-20 w-auto"
                 />
                 <button

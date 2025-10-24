@@ -6,27 +6,27 @@ const products = [
   {
     name: "Tile & Stone Adhesive",
     slug: "/category/tile-adhesive",
-    img: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1757152171/1_wl10m2.png",
+    img: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761303258/1_acszbr.png",
   },
   {
     name: "Epoxy & Tile Grout",
     slug: "/category/epoxy-grout",
-    img: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1757326898/2_1_dlkmlk.png",
+    img: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761302481/2_emt7cr.png",
   },
   {
     name: "Block Adhesive",
     slug: "/products/block-adhesive",
-    img: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1758277686/Block_Adhesive_40_Kg_Bag_yvampp.png",
+    img: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761302114/block-adhesive_qtkcol.png",
   },
   {
     name: "2k GROUT",
     slug: "/products/2k-grout",
-    img: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1758268804/senzo_crot_maoryq.png",
+    img: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761302429/6_pbmfdr.png",
   },
   {
     name: "Tile Cleaner",
     slug: "/products/tile-cleaner",
-    img: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1757146318/Tile_Cleaner_lqrt3k.png",
+    img: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761301938/tile_cleaner_v6iyoq.png",
   },
 ];
 

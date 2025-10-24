@@ -25,7 +25,7 @@ const TermsAndConditions = () => {
           className="space-y-6 text-lg leading-relaxed"
         >
           <p>
-            Welcome to the Senzo website. By accessing or using our website, you agree to be bound by these Terms and Conditions. Please read them carefully.
+            Welcome to the GeoGres website. By accessing or using our website, you agree to be bound by these Terms and Conditions. Please read them carefully.
           </p>
 
           <h2 className="text-2xl font-bold text-black mt-8 mb-4">1. Use of Website</h2>

@@ -5,45 +5,45 @@ const adhesives = [
   {
     id: "1",
     name: "Tile Adhesive for Ceramic & Vitrified Tiles",
-    tileType: "S-11",
+    tileType: "G-11",
     imgUrl:
-      "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1757146318/S-11_gajeor.png",
+      "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761301927/G-11_id8llm.png",
     coverageRate: 0.125,
     slug: "ceramic-tile",
   },
   {
     id: "2",
     name: "Polymer Modified Improved Tile Adhesive",
-    tileType: "S-21",
+    tileType: "G-21",
     imgUrl:
-      "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1757146320/S-21_onlbrd.png",
+      "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761302110/G-21_ypcger.png",
     coverageRate: 0.13,
     slug: "polymer-modified",
   },
   {
     id: "3",
     name: "POLYMER MODIFIED TILE & STONE ADHESIVE",
-    tileType: "S-31",
+    tileType: "G-31",
     imgUrl:
-      "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1757146320/S-31_gesscu.png",
+      "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761302004/G-31_hbt9km.png",
     coverageRate: 0.14,
     slug: "polymer-modified-tile",
   },
   {
     id: "4",
     name: "DEFORMABLE TILE & STONE ADHESIVE",
-    tileType: "S-41",
+    tileType: "G-41",
     imgUrl:
-      "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1757146320/S-41_ppe6yv.png",
+      "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761301915/G-41_jt7rqq.png",
     coverageRate: 0.15,
     slug: "deformable-tile-stone",
   },
   {
     id: "5",
     name: "HIGHLY DEFORMABLE TILE & STONE ADHESIVE",
-    tileType: "S-51",
+    tileType: "G-51",
     imgUrl:
-      "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1757146320/S-51_yl5yjh.png",
+      "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761301908/G-51_tghymx.png",
     coverageRate: 0.135,
     slug: "deformable-tile",
   },

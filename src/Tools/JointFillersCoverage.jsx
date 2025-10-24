@@ -11,13 +11,13 @@ const jointFillerProducts = [
   {
     id: "1",
     name: "EPOXY GROUT 1KG",
-    image: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1757146319/Epoxy_Grout_1kg___iymtto.png",
+    image: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761303434/1_Kg_bucket_ndbezw.png",
     coverage: 0.15,
   },
   {
     id: "2",
     name: "TILE GROUT",
-    image: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1757146329/Tile_Grout_nd7www.png",
+    image: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761302005/Tile_grout_nfirku.png",
     coverage: 0.12,
   },
   

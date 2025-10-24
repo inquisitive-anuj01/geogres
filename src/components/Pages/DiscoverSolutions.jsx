@@ -146,7 +146,7 @@ export default function DiscoverSolutionsDetail() {
                   {solution.recommendedbutton2slug && (
                     <button
                       onClick={() => navigate(`/${solution.recommendedbutton2slug}`)}
-                      className="bg-gray-200 text-black px-4 py-2 rounded-lg shadow hover:bg-black hover:text-white border hover:border-[#E5A025] transition"
+                      className="bg-white text-black px-4 py-2 rounded-lg shadow hover:bg-black hover:text-white border border-[#E5A025] transition cursor-pointer"
                     >
                       View Product
                     </button>
