@@ -11,9 +11,9 @@ import Review from '../Pages/Review'
 function Home() {
   return (
     <div className='bg-[#CFCFCF]'>
-      <HeroSection />
       <Certification/>
       <ProductInfo/>
+      <HeroSection />
       <ColorVisuals/>
       <UsefulTools/>
       <Pointers/>

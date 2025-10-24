@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 
 const logo =
-  "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1757323270/senzo_white_png_am9mkk.png";
+  "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761286957/grogres_1_et632g.png";
 
 const productsLink = [
   {

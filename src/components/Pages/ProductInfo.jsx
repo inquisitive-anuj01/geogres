@@ -54,7 +54,7 @@ const ProductInfo = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-2xl md:text-3xl  leading-tight text-gray-900 ">
-           <span className="uppercase text-4xl md:text-6xl font-bold">Senzo Premium</span> <br /> <span className="text-2xl md:text-3xl font-semibold ">Tile Fixing & Stone Care Solutions</span> 
+           <span className="uppercase text-3xl md:text-5xl font-bold">GeoGres Premium</span> <br /> <span className="text-2xl md:text-3xl font-semibold ">Tile Fixing & Stone Care Solutions</span> 
           </h2>
         </motion.div>
 
@@ -66,7 +66,7 @@ const ProductInfo = () => {
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
             Explore our premium range of adhesives, grouts, cleaners, and
             hardeners - crafted to deliver strength, durability, and elegance.
-            Trusted by professionals nationwide, Senzo ensures every project is
+            Trusted by professionals nationwide, GeoGres ensures every project is
             built to last.
           </p>
         </motion.div>

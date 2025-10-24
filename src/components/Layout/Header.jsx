@@ -13,7 +13,7 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 
 const logo =
-  "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1757323271/senzo_png_dmj1mk.png";
+  "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761286957/grogres_1_et632g.png";
 
 import { tileAdhesive } from "../ProductsInfo/product.js";
 import {

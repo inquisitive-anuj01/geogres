@@ -7,49 +7,49 @@ function Review() {
       designation: "Builder",
       rating: 5,
       review:
-        "Senzo tiles are exceptional! The quality is outstanding and the adhesive holds perfectly even in high moisture areas. Been using them for 3 years now and highly recommend to all builders.",
+        "GeoGres tiles are exceptional! The quality is outstanding and the adhesive holds perfectly even in high moisture areas. Been using them for 3 years now and highly recommend to all builders.",
     },
     {
       name: "Priya Sharma",
       designation: "Customer",
       rating: 5,
       review:
-        "Renovated my entire house with Senzo tiles. The variety of designs is amazing and the adhesive quality is top-notch. No issues even after 2 years of installation.",
+        "Renovated my entire house with GeoGres tiles. The variety of designs is amazing and the adhesive quality is top-notch. No issues even after 2 years of installation.",
     },
     {
       name: "Mohammed Ali",
       designation: "Tile Worker",
       rating: 4.5,
       review:
-        "As a professional tile installer, I can say Senzo products make my job easier. The adhesive spreads evenly and the tiles are perfectly sized. Great working experience.",
+        "As a professional tile installer, I can say GeoGres products make my job easier. The adhesive spreads evenly and the tiles are perfectly sized. Great working experience.",
     },
     {
       name: "Sunita Patel",
       designation: "Homeowner",
       rating: 5,
       review:
-        "Beautiful tiles with excellent durability! Used Senzo for my kitchen and bathroom renovation. The adhesive is strong and the tiles still look brand new after heavy usage.",
+        "Beautiful tiles with excellent durability! Used GeoGres for my kitchen and bathroom renovation. The adhesive is strong and the tiles still look brand new after heavy usage.",
     },
     {
       name: "Vikram Singh",
       designation: "Contractor",
       rating: 4,
       review:
-        "Reliable products with consistent quality. Have completed multiple projects using Senzo tiles and adhesive. Clients are always satisfied with the final results.",
+        "Reliable products with consistent quality. Have completed multiple projects using GeoGres tiles and adhesive. Clients are always satisfied with the final results.",
     },
     {
       name: "Anita Desai",
       designation: "Interior Designer",
       rating: 5,
       review:
-        "Senzo offers the perfect combination of aesthetics and functionality. The tile designs are modern and the adhesive ensures long-lasting installation. My go-to choice for all projects.",
+        "GeoGres offers the perfect combination of aesthetics and functionality. The tile designs are modern and the adhesive ensures long-lasting installation. My go-to choice for all projects.",
     },
     {
       name: "Ramesh Gupta",
       designation: "Builder",
       rating: 4.5,
       review:
-        "Excellent adhesive strength and tile quality. Have used Senzo products in over 50 residential projects. Never faced any complaints from customers. Highly recommended!",
+        "Excellent adhesive strength and tile quality. Have used GeoGres products in over 50 residential projects. Never faced any complaints from customers. Highly recommended!",
     },
     {
       name: "Kavita Joshi",
@@ -63,7 +63,7 @@ function Review() {
       designation: "Tile Worker",
       rating: 5,
       review:
-        "Working with Senzo products for 5+ years. The adhesive has excellent bonding strength and the tiles are easy to cut and install. Professional grade quality at reasonable prices.",
+        "Working with GeoGres products for 5+ years. The adhesive has excellent bonding strength and the tiles are easy to cut and install. Professional grade quality at reasonable prices.",
     },
   ];
 

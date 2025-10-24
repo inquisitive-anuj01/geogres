@@ -13,7 +13,7 @@ const AboutUs = () => {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-bold text-center mb-10"
         >
-          About <span className="text-[#E5A025]">Senzo</span>
+          About <span className="text-[#E5A025]">GeoGres</span>
           <div className="w-16 h-0.5 bg-[#E5A025] mx-auto rounded-full mt-4"></div>
         </motion.h2>
 
