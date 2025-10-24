@@ -76,7 +76,7 @@ function MobileCarousel() {
   }
 
   return (
-    <div className="relative w-full min-h-screen bg-slate-900 flex items-center justify-center px-4 py-8">
+    <div className="relative w-full min-h-screen bg-[#8e7766] flex items-center justify-center px-4 py-8">
       <div className="relative w-full max-w-md">
         {/* Mobile Navigation Buttons */}
         <motion.button
@@ -171,7 +171,7 @@ function DesktopCarousel() {
   }
 
   return (
-    <div className="relative w-full min-h-screen bg-slate-900 flex items-center justify-center px-4  rounded-t-[48px] mt-[-90px] pt-[40px] z-20 mb-10">
+    <div className="relative w-full min-h-screen bg-[#8e7766] flex items-center justify-center px-4  rounded-t-[48px] mt-[-90px] pt-[40px] z-20 mb-10">
       <div className="relative w-full max-w-6xl h-[500px] flex items-center justify-center">
         {/* Prev Button */}
         <motion.button
