@@ -7,13 +7,15 @@ import ProductInfo from '../Pages/ProductInfo'
 import Certification from '../Pages/Certification'
 import Pointers from '../Pages/Pointers'
 import Review from '../Pages/Review'
+import Hero from '../Pages/Hero'
 
 function Home() {
   return (
     <div className='bg-[#CFCFCF]'>
+      <Hero/>
       <Certification/>
       <ProductInfo/>
-      <HeroSection />
+      {/* <HeroSection /> */}
       <ColorVisuals/>
       <UsefulTools/>
       <Pointers/>
