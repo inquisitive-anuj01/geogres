@@ -8,6 +8,7 @@ import Certification from '../Pages/Certification'
 import Pointers from '../Pages/Pointers'
 import Review from '../Pages/Review'
 import Hero from '../Pages/Hero'
+import '../../App.css'
 
 function Home() {
   return (
