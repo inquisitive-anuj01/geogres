@@ -16,16 +16,16 @@ function Hero() {
         <DomeGallery 
           images={galleryImages}
           fit={0.85}
-          minRadius={900}
-          maxVerticalRotationDeg={0}
-          segments={26}
+          minRadius={1100}
+          maxVerticalRotationDeg={15}
+          segments={28}
           dragDampening={0.6}
           grayscale={false}
           imageBorderRadius="30px"
           openedImageBorderRadius="30px"
           dragSensitivity={25}
           autoRotate={true} 
-          autoRotateSpeed={0.1}
+          autoRotateSpeed={0.05}
           
         />
       </div>
