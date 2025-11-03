@@ -55,8 +55,10 @@ const NewHero = () => {
   }
 
   return (
-    <section className="min-h-screen bg-background overflow-hidden flex items-center mt-20 lg:mt-10">
-      <FloatingBubbles />
+    <section className="min-h-screen bg-background overflow-hidden flex items-center mt-26 lg:mt-10">
+      <div className="hidden lg:block">
+        <FloatingBubbles />
+      </div>
       <div className="max-w-auto mx-auto px-6 md:px-10 w-full">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* LEFT SECTION */}
