@@ -1,155 +1,185 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
-import { products } from "../ProductsInfo/heroProducts";
+import { useState } from "react"
+import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button"
+import { useNavigate } from "react-router-dom"
+import { products } from "../ProductsInfo/heroProducts"
+import FloatingBubbles from "../Extra/FloatingBubbles"
 
 const NewHero = () => {
-  const navigate = useNavigate();
-  const [activeProduct, setActiveProduct] = useState(products[0].id);
-  const [selectedImage, setSelectedImage] = useState(products[0].mainImage);
-  const [imageKey, setImageKey] = useState(0);
-  const [selectedDescription, setSelectedDescription] = useState("");
-  const [selectedTitle, setSelectedTitle] = useState("");
+  const navigate = useNavigate()
+  const [activeProduct, setActiveProduct] = useState(products[0].id)
+  const [selectedImage, setSelectedImage] = useState(products[0].mainImage)
+  const [imageKey, setImageKey] = useState(0)
+  const [selectedDescription, setSelectedDescription] = useState("")
+  const [selectedTitle, setSelectedTitle] = useState("")
+  const [isTransitioning, setIsTransitioning] = useState(false)
 
-  const currentProduct =
-    products.find((p) => p.id === activeProduct) || products[0];
+  const currentProduct = products.find((p) => p.id === activeProduct) || products[0]
 
   const handleAccordionChange = (value) => {
-    const newProduct = products.find((p) => p.id === value);
+    if (isTransitioning) return
+
+    setIsTransitioning(true)
+    const newProduct = products.find((p) => p.id === value)
     if (newProduct) {
-      setActiveProduct(value);
-      setSelectedImage(newProduct.mainImage);
-      setSelectedDescription("");
-      setSelectedTitle("");
-      setImageKey((prev) => prev + 1);
+      setActiveProduct(value)
+      setSelectedImage(newProduct.mainImage)
+      setSelectedDescription("")
+      setSelectedTitle("")
+      setImageKey((prev) => prev + 1)
+
+      setTimeout(() => {
+        setIsTransitioning(false)
+      }, 600)
     }
-  };
+  }
 
   const handleThumbnailClick = (thumb) => {
-    setSelectedImage(thumb);
-    setSelectedDescription(thumb.description);
-    setSelectedTitle(thumb.title);
-    setImageKey((prev) => prev + 1);
-  };
+    if (isTransitioning) return
+
+    setIsTransitioning(true)
+    setSelectedImage(thumb)
+    setSelectedDescription(thumb.description)
+    setSelectedTitle(thumb.title)
+    setImageKey((prev) => prev + 1)
+
+    setTimeout(() => {
+      setIsTransitioning(false)
+    }, 500)
+  }
 
   const handleRedirect = () => {
     if (selectedImage?.slug) {
-      navigate(selectedImage.slug);
+      navigate(selectedImage.slug)
     }
-  };
+  }
 
   return (
-    <section className="min-h-screen bg-background overflow-hidden flex items-center">
+    <section className="min-h-screen bg-background overflow-hidden flex items-center mt-20 lg:mt-10">
+      <FloatingBubbles />
       <div className="max-w-auto mx-auto px-6 md:px-10 w-full">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* LEFT SECTION */}
           <div className="flex flex-col space-y-6 justify-between ml-4 lg:ml-12">
-            <div
-              className="space-y-6 transition-opacity duration-700"
-              key={activeProduct}
-            >
-              {/* ✅ Dynamic title */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+            <div className="space-y-6 transition-opacity duration-500 ease-in-out" key={activeProduct}>
+              
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight transition-all duration-500 ease-in-out">
                 {selectedTitle || currentProduct.title}
               </h1>
 
-              <p className="text-lg text-muted-foreground max-w-xl">
+              <p className="text-lg text-muted-foreground max-w-xl transition-all duration-500 ease-in-out">
                 {selectedDescription || currentProduct.description}
               </p>
 
               <Button
                 onClick={handleRedirect}
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 rounded-lg cursor-pointer"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 rounded-lg cursor-pointer transition-transform duration-300 hover:scale-105"
               >
                 VIEW PRODUCTS
               </Button>
 
-              {/* Thumbnails */}
+              <div className="flex gap-2 items-stretch h-44 w-full max-w-sm">
+                {products.map((product, index) => (
+                  <motion.button
+                    key={product.id}
+                    onClick={() => handleAccordionChange(product.id)}
+                    className={`relative rounded-xl overflow-hidden border-2 cursor-pointer flex-1 transition-colors duration-300 ${
+                      activeProduct === product.id
+                        ? "border-accent shadow-2xl shadow-accent/20"
+                        : "border-border hover:border-accent/60 hover:shadow-lg"
+                    }`}
+                    initial={{ flex: 0.5 }}
+                    animate={{
+                      flex: activeProduct === product.id ? 2.5 : 0.5,
+                    }}
+                    transition={{
+                      duration: 0.8,
+                      ease: "easeInOut",
+                    }}
+                  >
+                    {activeProduct === product.id ? (
+                      <motion.div
+                        className="w-full h-full p-4 bg-gradient-to-br from-muted/40 to-muted/20 flex items-center justify-end"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.4, delay: 0.2 }}
+                      >
+                        <motion.img
+                          src={product.mainImage.url}
+                          alt={product.mainImage.alt}
+                          className="h-full object-contain -mr-2"
+                          initial={{ scale: 0.8, opacity: 0 }}
+                          animate={{ scale: 1, opacity: 1 }}
+                          transition={{ duration: 0.5, delay: 0.2 }}
+                          whileHover={{ scale: 1.05 }}
+                        />
+                      </motion.div>
+                    ) : (
+                      <motion.div
+                        className="w-full h-full flex items-center justify-center bg-gradient-to-b from-background to-muted/10 hover:from-muted/20 hover:to-muted/30 transition-all duration-500 ease-out py-6 px-2"
+                        initial={{ opacity: 1 }}
+                        animate={{ opacity: 1 }}
+                      >
+                        <motion.p
+                          className="text-sm font-bold text-foreground tracking-wider whitespace-nowrap"
+                          style={{
+                            writingMode: "vertical-rl",
+                            textOrientation: "mixed",
+                          }}
+                          initial={{ opacity: 1 }}
+                          animate={{ opacity: activeProduct === product.id ? 0 : 1 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          {product.title}
+                        </motion.p>
+                      </motion.div>
+                    )}
+                  </motion.button>
+                ))}
+              </div>
+
+              {/* ✅ Thumbnails */}
               <div className="flex flex-wrap gap-3 pt-4">
                 {currentProduct.thumbnails.map((thumb, index) => (
                   <button
                     key={`${activeProduct}-${index}`}
                     onClick={() => handleThumbnailClick(thumb)}
-                    className={`group relative w-20 h-20 md:w-24 md:h-24 border-2 rounded-lg overflow-hidden transition-all duration-300 ${
+                    className={`group relative w-20 h-20 md:w-24 md:h-24 border-2 rounded-lg overflow-hidden transition-all duration-300 ease-in-out ${
                       selectedImage.url === thumb.url
                         ? "border-accent shadow-lg scale-105"
                         : "border-border hover:border-accent/60 hover:scale-105"
-                    }`}
+                    } ${isTransitioning ? "pointer-events-none" : ""}`}
                   >
                     <img
-                      src={thumb.url}
+                      src={thumb.url || "/placeholder.svg"}
                       alt={thumb.alt}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 cursor-pointer"
+                      className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 cursor-pointer"
                     />
                   </button>
                 ))}
               </div>
             </div>
-
-            {/* Divider */}
-            <div className="relative">
-              <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t-2 border-foreground"></div>
-              </div>
-              <div className="relative flex justify-center">
-                <span className="bg-background px-6 text-lg font-bold text-foreground">
-                  Our Products
-                </span>
-              </div>
-            </div>
-
-            {/* Accordion */}
-            <div className="flex gap-3 items-stretch h-44">
-              {products.map((product, index) => (
-                <button
-                  key={product.id}
-                  onClick={() => handleAccordionChange(product.id)}
-                  className={`relative rounded-xl overflow-hidden transition-all duration-700 ease-in-out border-2 cursor-pointer ${
-                    activeProduct === product.id
-                      ? "flex-[3] border-accent shadow-2xl shadow-accent/20"
-                      : "flex-[0.5] border-border hover:border-accent/60 hover:shadow-lg"
-                  }`}
-                  style={{ transitionDelay: `${index * 50}ms` }}
-                >
-                  {activeProduct === product.id ? (
-                    <div className="w-full h-full p-6 bg-gradient-to-br from-muted/40 to-muted/20 flex items-center justify-center">
-                      <img
-                        src={product.mainImage.url}
-                        alt={product.mainImage.alt}
-                        className="w-full h-56 object-contain transition-transform duration-700 hover:scale-105"
-                      />
-                    </div>
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-b from-background to-muted/10 hover:from-muted/20 hover:to-muted/30 transition-all duration-500 py-8 px-3">
-                      <p
-                        className="text-sm font-bold text-foreground tracking-wider whitespace-nowrap"
-                        style={{
-                          writingMode: "vertical-rl",
-                          textOrientation: "mixed",
-                        }}
-                      >
-                        {product.title}
-                      </p>
-                    </div>
-                  )}
-                </button>
-              ))}
-            </div>
           </div>
 
-          {/* RIGHT SECTION */}
-          <div className="flex items-center justify-center h-full">
-            <img
-              key={imageKey}
-              src={selectedImage.url}
-              alt={selectedImage.alt}
-              className="w-full h-auto object-contain transition-transform duration-700"
-            />
+          {/* RIGHT SECTION - Modified to stick to right border */}
+          <div className="flex items-center justify-end h-full -mr-4 md:-mr-10">
+            <div className="relative">
+              <img
+                key={imageKey}
+                src={selectedImage.url || "/placeholder.svg"}
+                alt={selectedImage.alt}
+                className="max-w-full h-auto object-contain transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] transform"
+                style={{
+                  transform: isTransitioning ? "scale(0.95) translateX(10px)" : "scale(1) translateX(0)",
+                  opacity: isTransitioning ? 0.8 : 1,
+                }}
+              />
+            </div>
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default NewHero;
+export default NewHero

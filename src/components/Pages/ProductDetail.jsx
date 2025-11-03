@@ -179,7 +179,7 @@ export default function ProductDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-[#e6dcd5] py-16 px-4 sm:px-6 lg:px-8 mb-12">
+    <div className="min-h-screen bg-[#e6dcd5] py-16 px-4 sm:px-6 lg:px-8 mb-12 mt-20">
       <div className="max-w-6xl mx-auto">
         {/* top: image + title/desc */}
         <div className="grid md:grid-cols-2 gap-12 items-start">

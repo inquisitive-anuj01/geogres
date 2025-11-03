@@ -16,8 +16,7 @@ function Home() {
     <div className='bg-[#CFCFCF]'>
       <NewHero/>
       <Certification/>
-      <ProductInfo/>
-      
+      <ProductInfo/> 
       <ColorVisuals/>
       <Hero/>
       <UsefulTools/>

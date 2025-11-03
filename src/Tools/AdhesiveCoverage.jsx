@@ -110,7 +110,7 @@ const AdhesiveCoverage = () => {
 
   return (
     <div>
-      <div className="w-full min-h-screen mx-auto bg-[#e6dcd5] font-sans text-gray-800 overflow-hidden p-6 rounded-b-3xl mb-16">
+      <div className="w-full min-h-screen mx-auto bg-[#e6dcd5] font-sans text-gray-800 overflow-hidden p-6 rounded-b-3xl mb-16 mt-20">
         <h1 className="text-xl md:text-5xl font-semibold text-center text-black mb-2">
           Adhesive Coverage Calculator
         </h1>

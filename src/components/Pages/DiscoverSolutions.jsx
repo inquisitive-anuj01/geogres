@@ -67,7 +67,7 @@ export default function DiscoverSolutionsDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-[#e6dcd5] py-16 px-4 sm:px-6 lg:px-8 mb-10">
+    <div className="min-h-screen bg-[#e6dcd5] py-16 px-4 sm:px-6 lg:px-8 mb-10 mt-20">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
         {/* LEFT: Problem Section */}
         <div>

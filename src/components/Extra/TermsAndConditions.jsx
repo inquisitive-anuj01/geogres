@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const TermsAndConditions = () => {
   return (
-    <section className="bg-[#e6dcd5] text-black py-16 px-6 md:px-20 relative mb-10">
+    <section className="bg-[#e6dcd5] text-black py-16 px-6 md:px-20 relative mb-10 mt-20">
       <div className="max-w-6xl mx-auto">
         {/* Title with animation */}
         <motion.h1

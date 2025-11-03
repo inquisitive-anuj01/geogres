@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useRef } from "react"
 import { useNavigate } from "react-router-dom"
 
@@ -185,27 +183,25 @@ function AdhesiveSelector() {
   const getProductRecommendations = () => {
     const { roomCategory, substrateType, tileType, tileSize } = selections
 
-    // Water Submerged areas - mostly S-31 with some S-41 and S-51
     if (roomCategory === "Water Submerged") {
       if (tileType === "Natural Stones" && tileSize === "Above 4'x4'") {
-        return [tileAdhesiveProducts.find((p) => p.itemNo === "S-41")]
+        return [tileAdhesiveProducts.find((p) => p.itemNo === "G-41")]
       }
       if (tileType === "Quartz/ Composites/ Engineered Stone/ Metal/ Glass") {
-        return [tileAdhesiveProducts.find((p) => p.itemNo === "S-51")]
+        return [tileAdhesiveProducts.find((p) => p.itemNo === "G-51")]
       }
-      // Default to S-31 for water submerged
-      return [tileAdhesiveProducts.find((p) => p.itemNo === "S-31")]
+      return [tileAdhesiveProducts.find((p) => p.itemNo === "G-31")]
     }
 
     // Vibration Areas - based on characteristics and scope
     if (roomCategory === "Vibration Areas") {
       if (tileSize === "Above 4'x4'" || tileType === "Quartz/ Composites/ Engineered Stone/ Metal/ Glass") {
-        return [tileAdhesiveProducts.find((p) => p.itemNo === "S-51")]
+        return [tileAdhesiveProducts.find((p) => p.itemNo === "G-51")]
       }
       if (tileType === "Natural Stones" || tileSize === "2'x2' to 4'x4'") {
-        return [tileAdhesiveProducts.find((p) => p.itemNo === "S-41")]
+        return [tileAdhesiveProducts.find((p) => p.itemNo === "G-41")]
       }
-      return [tileAdhesiveProducts.find((p) => p.itemNo === "S-31")]
+      return [tileAdhesiveProducts.find((p) => p.itemNo === "G-31")]
     }
 
     // Internal and External Areas (same logic)
@@ -213,41 +209,41 @@ function AdhesiveSelector() {
       // Cement Based Surfaces
       if (substrateType === "Cement Based Surfaces Like Concrete, Screed") {
         if (tileType === "Ceramic Tiles/ Porous Tiles") {
-          if (tileSize === "Up to 2'x2'") return [tileAdhesiveProducts.find((p) => p.itemNo === "S-11")]
-          if (tileSize === "2'x2' to 4'x4'") return [tileAdhesiveProducts.find((p) => p.itemNo === "S-21")]
-          if (tileSize === "Above 4'x4'") return [tileAdhesiveProducts.find((p) => p.itemNo === "S-31")]
+          if (tileSize === "Up to 2'x2'") return [tileAdhesiveProducts.find((p) => p.itemNo === "G-11")]
+          if (tileSize === "2'x2' to 4'x4'") return [tileAdhesiveProducts.find((p) => p.itemNo === "G-21")]
+          if (tileSize === "Above 4'x4'") return [tileAdhesiveProducts.find((p) => p.itemNo === "G-31")]
         }
 
         if (tileType === "Vitrified Tiles") {
-          if (tileSize === "Up to 2'x2'") return [tileAdhesiveProducts.find((p) => p.itemNo === "S-11")]
-          if (tileSize === "2'x2' to 4'x4'") return [tileAdhesiveProducts.find((p) => p.itemNo === "S-21")]
-          if (tileSize === "Above 4'x4'") return [tileAdhesiveProducts.find((p) => p.itemNo === "S-31")]
+          if (tileSize === "Up to 2'x2'") return [tileAdhesiveProducts.find((p) => p.itemNo === "G-11")]
+          if (tileSize === "2'x2' to 4'x4'") return [tileAdhesiveProducts.find((p) => p.itemNo === "G-21")]
+          if (tileSize === "Above 4'x4'") return [tileAdhesiveProducts.find((p) => p.itemNo === "G-31")]
         }
 
         if (tileType === "Natural Stones") {
-          if (tileSize === "Up to 2'x2'") return [tileAdhesiveProducts.find((p) => p.itemNo === "S-21")]
-          if (tileSize === "2'x2' to 4'x4'") return [tileAdhesiveProducts.find((p) => p.itemNo === "S-31")]
-          if (tileSize === "Above 4'x4'") return [tileAdhesiveProducts.find((p) => p.itemNo === "S-41")]
+          if (tileSize === "Up to 2'x2'") return [tileAdhesiveProducts.find((p) => p.itemNo === "G-21")]
+          if (tileSize === "2'x2' to 4'x4'") return [tileAdhesiveProducts.find((p) => p.itemNo === "G-31")]
+          if (tileSize === "Above 4'x4'") return [tileAdhesiveProducts.find((p) => p.itemNo === "G-41")]
         }
 
         if (tileType === "Glass Mosaic Tile") {
-          if (tileSize === "Up to 2'x2'") return [tileAdhesiveProducts.find((p) => p.itemNo === "S-31")]
+          if (tileSize === "Up to 2'x2'") return [tileAdhesiveProducts.find((p) => p.itemNo === "G-31")]
           if (tileSize === "2'x2' to 4'x4'" || tileSize === "Above 4'x4'")
-            return [tileAdhesiveProducts.find((p) => p.itemNo === "S-41")]
+            return [tileAdhesiveProducts.find((p) => p.itemNo === "G-41")]
         }
 
         if (tileType === "Quartz/ Composites/ Engineered Stone/ Metal/ Glass") {
-          if (tileSize === "Up to 2'x2'") return [tileAdhesiveProducts.find((p) => p.itemNo === "S-31")]
-          if (tileSize === "2'x2' to 4'x4'") return [tileAdhesiveProducts.find((p) => p.itemNo === "S-41")]
-          if (tileSize === "Above 4'x4'") return [tileAdhesiveProducts.find((p) => p.itemNo === "S-51")]
+          if (tileSize === "Up to 2'x2'") return [tileAdhesiveProducts.find((p) => p.itemNo === "G-31")]
+          if (tileSize === "2'x2' to 4'x4'") return [tileAdhesiveProducts.find((p) => p.itemNo === "G-41")]
+          if (tileSize === "Above 4'x4'") return [tileAdhesiveProducts.find((p) => p.itemNo === "G-51")]
         }
       }
 
       // Tile-On-Tile applications
       if (substrateType === "Tile-On-Tile / Existing Stones") {
-        if (tileSize === "Up to 2'x2'") return [tileAdhesiveProducts.find((p) => p.itemNo === "S-21")]
-        if (tileSize === "2'x2' to 4'x4'") return [tileAdhesiveProducts.find((p) => p.itemNo === "S-31")]
-        if (tileSize === "Above 4'x4'") return [tileAdhesiveProducts.find((p) => p.itemNo === "S-41")]
+        if (tileSize === "Up to 2'x2'") return [tileAdhesiveProducts.find((p) => p.itemNo === "G-21")]
+        if (tileSize === "2'x2' to 4'x4'") return [tileAdhesiveProducts.find((p) => p.itemNo === "G-31")]
+        if (tileSize === "Above 4'x4'") return [tileAdhesiveProducts.find((p) => p.itemNo === "G-41")]
       }
 
       // Other substrate types - default recommendations
@@ -255,14 +251,14 @@ function AdhesiveSelector() {
         substrateType === "Drywalls Like Gypsum/ Cement/ Bison Boards / Plywood" ||
         substrateType === "Metal/ Glass/ Epoxy Flooring"
       ) {
-        if (tileSize === "Up to 2'x2'") return [tileAdhesiveProducts.find((p) => p.itemNo === "S-31")]
-        if (tileSize === "2'x2' to 4'x4'") return [tileAdhesiveProducts.find((p) => p.itemNo === "S-41")]
-        if (tileSize === "Above 4'x4'") return [tileAdhesiveProducts.find((p) => p.itemNo === "S-51")]
+        if (tileSize === "Up to 2'x2'") return [tileAdhesiveProducts.find((p) => p.itemNo === "G-31")]
+        if (tileSize === "2'x2' to 4'x4'") return [tileAdhesiveProducts.find((p) => p.itemNo === "G-41")]
+        if (tileSize === "Above 4'x4'") return [tileAdhesiveProducts.find((p) => p.itemNo === "G-51")]
       }
     }
 
     // Fallback to default recommendations
-    return [tileAdhesiveProducts.find((p) => p.itemNo === "S-31")]
+    return [tileAdhesiveProducts.find((p) => p.itemNo === "G-31")]
   }
 
   const handleSelection = (key, value) => {
@@ -358,7 +354,7 @@ function AdhesiveSelector() {
   const { roomCategories, applicationAreas, substrateTypes, tileTypes, tileSizes } = adhesiveData.current
 
   return (
-    <div className=" bg-[#e6dcd5] min-h-screen text-gray-800 p-4 sm:p-8 mb-14">
+    <div className=" bg-[#e6dcd5] min-h-screen text-gray-800 p-4 sm:p-8 mb-14 mt-20">
       {/* Header and Progress Bar */}
       <div className="max-w-7xl mx-auto mb-8">
         <div className="text-center">

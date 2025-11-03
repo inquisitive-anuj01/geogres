@@ -9,7 +9,7 @@ const OtherProducts = () => {
   const allOtherProducts = [...TileCleaner, ...BlockAdhesive, ...grout2k];
 
   return (
-    <div className="min-h-screen bg-[#e6dcd5] mb-12">
+    <div className="min-h-screen bg-[#e6dcd5] mb-12 mt-20">
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}

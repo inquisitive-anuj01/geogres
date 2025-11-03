@@ -165,13 +165,13 @@ export const products = [
     description:
       "High-performance epoxy grouts for professional finishes. Water-resistant, stain-proof, and perfect for high-traffic areas.",
     mainImage: {
-      url: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1762147248/grouts_inu2nx.png",
+      url: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1762167814/1_Kg_bucket_zatspc.png",
       alt: "Epoxy Grouts",
       slug: "/category/epoxy-grout",
     },
     thumbnails: [
       {
-        url: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761303434/1_Kg_bucket_ndbezw.png",
+        url: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1762167814/1_Kg_bucket_zatspc.png",
         alt: "EPOXY GROUT 1KG",
         title: "EPOXY GROUT 1KG",
         description:

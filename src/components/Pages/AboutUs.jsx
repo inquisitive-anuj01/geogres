@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const AboutUs = () => {
   return (
-    <section className="bg-[#e6dcd5] text-black py-16 px-6 md:px-20 relative z-40 mb-10">
+    <section className="bg-[#e6dcd5] text-black py-16 px-6 md:px-20 relative z-40 mb-10 mt-20 ">
       <div className="max-w-6xl mx-auto">
         {/* Title */}
         <motion.h2

@@ -416,7 +416,7 @@ const JointFillersVisuals = () => {
 
   return (
     <div className="min-h-screen bg-[#e6dcd5] font-sans text-gray-800 flex flex-col mb-14">
-      <div className="flex-1 p-4 sm:p-8">
+      <div className="flex-1 p-4 sm:p-8 mt-20">
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
           <div className="text-center mb-8">
