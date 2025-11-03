@@ -9,15 +9,17 @@ import Pointers from '../Pages/Pointers'
 import Review from '../Pages/Review'
 import Hero from '../Pages/Hero'
 import '../../App.css'
+import NewHero from '../Pages/NewHero'
 
 function Home() {
   return (
     <div className='bg-[#CFCFCF]'>
-      <Hero/>
+      <NewHero/>
       <Certification/>
       <ProductInfo/>
-      {/* <HeroSection /> */}
+      
       <ColorVisuals/>
+      <Hero/>
       <UsefulTools/>
       <Pointers/>
       <Review/>
