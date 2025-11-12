@@ -33,7 +33,7 @@ const UsefulTools = () => {
   return (
     <section
       id="tools"
-      className="bg-[#e6dcd5] z-30 min-h-screen text-black py-20 px-6 sm:px-12 rounded-t-[58px] relative mt-[-40px] pt-[40px] flex justify-center items-center"
+      className="bg-[#faebe3] z-30 min-h-screen text-black py-20 px-6 sm:px-12 rounded-t-[58px] relative mt-[-40px] pt-[40px] flex justify-center items-center"
     >
       {/* Inner Container */}
       <div className="bg-white rounded-3xl shadow-lg p-10 w-full max-w-6xl">
@@ -55,15 +55,15 @@ const UsefulTools = () => {
               <div
                 key={tool.id}
                 onClick={() => navigate(tool.link)}
-                className="group bg-[#e6dcd5] p-8 rounded-2xl cursor-pointer transition-all duration-300 hover:bg-[#b09c8d] hover:shadow-xl flex flex-col items-center text-center hover:text-white"
+                className="group bg-[#faebe3] p-8 rounded-2xl cursor-pointer transition-all duration-300 hover:bg-[#b09c8d] hover:shadow-xl flex flex-col items-center text-center hover:text-white"
               >
-                <div className="w-20 h-20 flex items-center justify-center rounded-full bg-[#b09c8d] group-hover:bg-[#e6dcd5] mb-6 transition-all ">
-                  <Icon className="w-10 h-10 text-white group-hover:text-[#E5A025] "  />
+                <div className="w-20 h-20 flex items-center justify-center rounded-full bg-[#b09c8d] group-hover:bg-[#faebe3] mb-6 transition-all ">
+                  <Icon className="w-10 h-10 text-white group-hover:text-[#74103e] "  />
                 </div>
                 <h3 className="text-xl font-bold mb-2 uppercase group-hover:text-white">
                   {tool.title}
                 </h3>
-                <div className="w-16 h-0.5 bg-[#E5A025] mx-auto rounded-full"></div>
+                <div className="w-16 h-0.5 bg-[#74103e] mx-auto rounded-full"></div>
                 <p className="text-black text-sm font-medium italic opacity-0 max-h-0 overflow-hidden transition-all duration-300 group-hover:opacity-100 group-hover:max-h-40 group-hover:mt-2 uppercase group-hover:text-white">
                   {tool.description}
                 </p>

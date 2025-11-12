@@ -55,9 +55,9 @@ const NewHero = () => {
   }
 
   return (
-    <section className="min-h-screen bg-background overflow-hidden flex items-center mt-26 lg:mt-10">
+    <section className="min-h-screen bg-[#faebe3] overflow-hidden flex items-center mt-26 lg:mt-10">
       <div className="hidden lg:block">
-        <FloatingBubbles />
+        {/* <FloatingBubbles /> */}
       </div>
       <div className="max-w-auto mx-auto px-6 md:px-10 w-full">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -75,17 +75,17 @@ const NewHero = () => {
 
               <Button
                 onClick={handleRedirect}
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 rounded-lg cursor-pointer transition-transform duration-300 hover:scale-105"
+                className="bg-[#74103e]  text-primary-foreground font-semibold px-8 py-3 rounded-lg cursor-pointer transition-transform duration-300 hover:scale-105"
               >
                 VIEW PRODUCTS
               </Button>
 
-              <div className="flex gap-2 items-stretch h-44 w-full max-w-sm">
+              <div className="flex gap-2 items-stretch h-44 w-full max-w-sm ">
                 {products.map((product, index) => (
                   <motion.button
                     key={product.id}
                     onClick={() => handleAccordionChange(product.id)}
-                    className={`relative rounded-xl overflow-hidden border-2 cursor-pointer flex-1 transition-colors duration-300 ${
+                    className={`relative rounded-xl overflow-hidden border-2 cursor-pointer flex-1 transition-colors duration-300  ${
                       activeProduct === product.id
                         ? "border-accent shadow-2xl shadow-accent/20"
                         : "border-border hover:border-accent/60 hover:shadow-lg"
@@ -101,7 +101,7 @@ const NewHero = () => {
                   >
                     {activeProduct === product.id ? (
                       <motion.div
-                        className="w-full h-full p-4 bg-gradient-to-br from-muted/40 to-muted/20 flex items-center justify-end"
+                        className="w-full h-full p-4 bg-gradient-to-br from-muted/40 to-muted/20 flex items-center justify-end border-[#74003c] border-1 rounded-xl "
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.4, delay: 0.2 }}
@@ -118,12 +118,12 @@ const NewHero = () => {
                       </motion.div>
                     ) : (
                       <motion.div
-                        className="w-full h-full flex items-center justify-center bg-gradient-to-b from-background to-muted/10 hover:from-muted/20 hover:to-muted/30 transition-all duration-500 ease-out py-6 px-2"
+                        className="w-full h-full flex items-center justify-center bg-gradient-to-b from-background to-muted/10 hover:from-muted/20 hover:to-muted/30 transition-all duration-500 ease-out py-6 px-2 "
                         initial={{ opacity: 1 }}
                         animate={{ opacity: 1 }}
                       >
                         <motion.p
-                          className="text-sm font-bold text-foreground tracking-wider whitespace-nowrap"
+                          className="text-sm font-bold text-foreground tracking-wider whitespace-nowrap "
                           style={{
                             writingMode: "vertical-rl",
                             textOrientation: "mixed",
@@ -146,9 +146,9 @@ const NewHero = () => {
                   <button
                     key={`${activeProduct}-${index}`}
                     onClick={() => handleThumbnailClick(thumb)}
-                    className={`group relative w-20 h-20 md:w-24 md:h-24 border-2 rounded-lg overflow-hidden transition-all duration-300 ease-in-out ${
+                    className={`group relative w-20 h-20 md:w-24 md:h-24 border-1 rounded-lg overflow-hidden transition-all duration-300 ease-in-out  ${
                       selectedImage.url === thumb.url
-                        ? "border-accent shadow-lg scale-105"
+                        ? " shadow-lg scale-105 border-[#74003c] border-1 rounded-xl"
                         : "border-border hover:border-accent/60 hover:scale-105"
                     } ${isTransitioning ? "pointer-events-none" : ""}`}
                   >

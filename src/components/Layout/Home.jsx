@@ -13,15 +13,15 @@ import NewHero from '../Pages/NewHero'
 
 function Home() {
   return (
-    <div className='bg-[#CFCFCF]'>
+    <div className='bg-[#faebe3]'>
       <NewHero/>
       <Certification/>
       <ProductInfo/> 
       <ColorVisuals/>
-      <Hero/>
       <UsefulTools/>
       <Pointers/>
       <Review/>
+      <Hero/>
     </div>
   )
 }

@@ -24,11 +24,11 @@ import DiscoverSolutions from "./components/Pages/DiscoverSolutions.jsx";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50 text-black">
+    <div className="min-h-screen bg-[#faebe3] text-black">
       <Router>
         <ScrollToTop />
         <Header />
-        <main>
+        <main className="pt-2">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Button } from "../ui/button";
 
 const ColorVisuals = () => {
   const [selectedColor, setSelectedColor] = useState(null);
@@ -84,7 +85,7 @@ const ColorVisuals = () => {
   };
 
   return (
-    <div className="relative z-20 w-full min-h-[640px] mt-[-90px] pt-[40px] flex justify-center py-12 px-4 overflow-hidden bg-white font-sans text-black rounded-t-[48px] shadow-lg">
+    <div className="relative z-20 w-full min-h-[640px] mt-[-90px] pt-[40px] flex justify-center py-12 px-4 overflow-hidden bg-black/95 font-sans text-white rounded-t-[48px] shadow-lg">
       <div className="relative z-10 w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-center gap-x-24 overflow-hidden">
         {/* LEFT SIDE → TEXT */}
         <div className="relative z-10 w-full md:flex-1 flex flex-col justify-center items-center text-center md:text-left md:items-start p-6 md:p-12">
@@ -96,12 +97,12 @@ const ColorVisuals = () => {
             colors? Try it yourself. Decide.
           </p>
 
-          <button
+          <Button
             onClick={handleViewMore}
-            className="mt-6 px-8 py-3 w-fit mx-auto md:mx-0 text-md font-semibold text-black bg-gray-200 border-2 border-white rounded-full transition-all duration-300 hover:bg-white hover:text-[#E5A025] hover:scale-105 hover:border-[#E5A025] cursor-pointer"
+            className="bg-[#74103e]  text-primary-foreground font-semibold  rounded-lg cursor-pointer transition-transform duration-300 hover:scale-105 mt-6 px-8 py-3 w-fit mx-auto md:mx-0 text-md "
           >
-            EXPLORE POSSIBILITIES
-          </button>
+            VIEW PRODUCTS
+          </Button>
         </div>
 
         {/* RIGHT SIDE → IMAGE + SWATCHES */}

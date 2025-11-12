@@ -54,18 +54,18 @@ function TimelineItem({ pointer, index, isLast }) {
       )}
 
       {/* Icon badge */}
-      <div className="relative z-10 flex-shrink-0 w-12 h-12 bg-[#b09c8d] rounded-full flex items-center justify-center text-white shadow-lg group-hover:bg-[#8e7766] transition-colors duration-300">
+      <div className="relative z-10 flex-shrink-0 w-12 h-12 bg-[#74103e] rounded-full flex items-center justify-center text-white shadow-lg  transition-colors duration-300">
         <IconComponent className="w-6 h-6 text-white" />
       </div>
 
       {/* Content */}
       <div className="ml-6 pb-12">
         <div className="flex items-center mb-3">
-          <h3 className="text-xl font-bold text-slate-900 group-hover:text-slate-700 transition-colors duration-300">
+          <h3 className="text-xl font-bold text-white  transition-colors duration-300">
             {pointer.title}
           </h3>
         </div>
-        <p className="text-slate-600 leading-relaxed max-w-sm">
+        <p className="text-gray-400 leading-relaxed max-w-sm">
           {pointer.description}
         </p>
       </div>
@@ -76,14 +76,14 @@ function TimelineItem({ pointer, index, isLast }) {
 
 function Pointers() {
   return (
-    <div className="relative py-16 bg-white rounded-t-[50px] mt-[-60px] pt-[30px] z-40 mb-10">
+    <div className="relative py-16 bg-black rounded-t-[50px] mt-[-60px] pt-[30px] z-40 mb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-16 uppercase">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 mb-4">
-            What <span className="text-[#8e7766]">Sets Us</span> Apart
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4">
+            What <span className="text-[#faebe3]">Sets Us</span> Apart
           </h2>
-          <span className="block w-20 md:w-28 h-[3px] bg-[#E5A025] mx-auto mt-3 rounded-full"></span>
+          <span className="block w-20 md:w-28 h-[3px] bg-[#74103e] mx-auto mt-3 rounded-full"></span>
         </div>
 
         <div className="flex justify-center">

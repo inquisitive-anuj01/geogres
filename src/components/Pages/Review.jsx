@@ -80,7 +80,7 @@ function Review() {
       stars.push(
         <svg
           key={`full-${i}`}
-          className="w-4 h-4 text-yellow-400 fill-current"
+          className="w-4 h-4 text-[#74103e] fill-current"
           viewBox="0 0 20 20"
         >
           <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
@@ -99,7 +99,7 @@ function Review() {
           </svg>
           <div className="absolute inset-0 overflow-hidden w-1/2">
             <svg
-              className="w-4 h-4 text-yellow-400 fill-current"
+              className="w-4 h-4 text-[#74103e]  fill-current"
               viewBox="0 0 20 20"
             >
               <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
@@ -113,7 +113,7 @@ function Review() {
   };
 
   return (
-    <div className="relative h-[70vh] py-16 bg-[#e6dcd5] rounded-t-[48px] mt-[-80px] pt-[30px] z-40 overflow-hidden ">
+    <div className="relative h-[70vh] py-16 bg-[#faebe3] rounded-t-[48px] mt-[-80px] pt-[30px] z-40 overflow-hidden ">
       <div className="mx-auto px-4">
         {/* Heading */}
         <h2 className="relative text-2xl sm:text-4xl md:text-5xl font-semibold text-center text-gray-800 mb-10 uppercase">
@@ -143,7 +143,7 @@ function Review() {
 
                 <div
                   className={`w-10 md:w-7 h-1 rounded-full mt-3 md:mt-4 ${
-                    index % 2 === 0 ? "bg-[#E5A025]" : "bg-black"
+                    index % 2 === 0 ? "bg-[#74103e]" : "bg-black"
                   }`}
                 />
 

@@ -45,7 +45,7 @@ const cardVariants = {
 
 const ProductInfo = () => {
   return (
-    <section className="relative h-auto bg-[#e6dcd5] py-20 px-6 sm:px-12 rounded-t-[48px] mt-[-40px] pt-[40px] z-10 mb-10">
+    <section className="relative h-auto bg-[#faebe3] py-20 px-6 sm:px-12 rounded-t-[48px] mt-[-40px] pt-[40px] z-10 mb-10">
       {/* Heading Section */}
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-20">
         <motion.div
@@ -85,7 +85,7 @@ const ProductInfo = () => {
             variants={cardVariants}
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 250 }}
-            className="bg-white rounded-2xl shadow-md overflow-hidden group cursor-pointer hover:shadow-xl border hover:border-black"
+            className="bg-white rounded-2xl shadow-md overflow-hidden group cursor-pointer hover:shadow-xl border hover:border-[#74103e]"
           >
             <Link to={product.slug}>
               {/* Image */}
@@ -93,13 +93,13 @@ const ProductInfo = () => {
                 <img
                   src={product.img}
                   alt={product.name}
-                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 border-b-2 border-gray-400"
+                  className="w-full h-full object-contain transition-transform duration-900 group-hover:scale-75 "
                 />
               </div>
 
               {/* Product Name */}
               <div className="p-4 text-center">
-                <h3 className="text-base md:text-lg font-semibold text-gray-900 group-hover:text-[#E5A025] transition-colors duration-300">
+                <h3 className="text-base md:text-lg font-semibold text-gray-900 group-hover:text-[#74103e] transition-colors duration-300">
                   {product.name}
                 </h3>
               </div>
