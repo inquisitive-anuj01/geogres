@@ -6,7 +6,7 @@ import { Package, Palette, Award } from "lucide-react";
 
 const TileAdhesive = () => {
   return (
-    <div className="min-h-screen bg-[#e6dcd5] mb-12 mt-20">
+    <div className="min-h-screen bg-[#faebe3] mb-12 mt-20">
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -15,7 +15,7 @@ const TileAdhesive = () => {
         className="text-center py-16 px-6"
       >
         <h1 className="text-5xl font-bold text-gray-900 mb-4 uppercase">
-          Tile<span className="text-[#E5A025]"> Adhesive</span>  Products
+          Tile<span className="text-[#74103e]"> Adhesive</span>  Products
         </h1>
         <p className="text-lg text-black max-w-3xl mx-auto leading-relaxed">
           Discover our premium range of adhesive solutions for tiles and stones <br/>
@@ -66,7 +66,7 @@ const TileAdhesive = () => {
                       <Package size={14} className="text-black" /> {product.packaging}
                     </span>
                     <span className="flex items-center gap-1 bg-gray-100  text-xs font-bold px-3 py-1 rounded-full">
-                      <Award size={14} className="text-[#E5A025]" /> {product.standard}
+                      <Award size={14} className="text-[#74103e]" /> {product.standard}
                     </span>
                   </div>
 
@@ -75,7 +75,7 @@ const TileAdhesive = () => {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="px-5 py-2 text-sm font-medium text-black border hover:border-[#E5A025] hover:bg-black hover:text-white rounded-full shadow-md hover:shadow-lg transition cursor-pointer"
+                      className="px-5 py-2 text-sm font-medium text-black border hover:border-[#74103e] hover:bg-[#74103e] hover:text-white rounded-full shadow-md hover:shadow-lg transition cursor-pointer"
                     >
                       View Details →
                     </motion.button>

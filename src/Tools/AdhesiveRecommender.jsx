@@ -354,7 +354,7 @@ function AdhesiveSelector() {
   const { roomCategories, applicationAreas, substrateTypes, tileTypes, tileSizes } = adhesiveData.current
 
   return (
-    <div className=" bg-[#e6dcd5] min-h-screen text-gray-800 p-4 sm:p-8 mb-14 mt-20">
+    <div className=" bg-[#faebe3] min-h-screen text-gray-800 p-4 sm:p-8 mb-14 mt-20">
       {/* Header and Progress Bar */}
       <div className="max-w-7xl mx-auto mb-8">
         <div className="text-center">
@@ -371,7 +371,7 @@ function AdhesiveSelector() {
           <div className="flex items-center justify-center space-x-2 md:space-x-8">
             <div className="flex items-center">
               <div
-                className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center text-black font-bold text-sm transition-colors duration-300 ${currentStep >= 1 ? "bg-yellow-400" : "bg-white"}`}
+                className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center  font-bold text-sm transition-colors duration-300 ${currentStep >= 1 ? "bg-[#74103e] text-white" : "bg-white text-black"}`}
               >
                 1
               </div>
@@ -383,12 +383,12 @@ function AdhesiveSelector() {
             </div>
             <div className="w-8 md:w-16 h-1 bg-gray-300">
               <div
-                className={`h-full transition-all duration-300 ${currentStep >= 2 ? "bg-yellow-500 w-full" : "w-0"}`}
+                className={`h-full transition-all duration-300 ${currentStep >= 2 ? "bg-[#74103e] w-full" : "w-0"}`}
               ></div>
             </div>
             <div className="flex items-center">
               <div
-                className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center text-black font-bold text-sm transition-colors duration-300 ${currentStep >= 2 ? "bg-yellow-400" : "bg-white"}`}
+                className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center  font-bold text-sm transition-colors duration-300 ${currentStep >= 2 ? "bg-[#74103e] text-white" : "bg-white text-black"}`}
               >
                 2
               </div>
@@ -400,12 +400,12 @@ function AdhesiveSelector() {
             </div>
             <div className="w-8 md:w-16 h-1 bg-gray-300">
               <div
-                className={`h-full transition-all duration-300 ${currentStep >= 3 ? "bg-yellow-500 w-full" : "w-0"}`}
+                className={`h-full transition-all duration-300 ${currentStep >= 3 ? "bg-[#74103e] w-full" : "w-0"}`}
               ></div>
             </div>
             <div className="flex items-center">
               <div
-                className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center text-black font-bold text-sm transition-colors duration-300 ${currentStep >= 3 ? "bg-yellow-400" : "bg-white"}`}
+                className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center  font-bold text-sm transition-colors duration-300 ${currentStep >= 3 ? "bg-[#74103e] text-white" : "bg-white text-black"}`}
               >
                 3
               </div>
@@ -426,7 +426,7 @@ function AdhesiveSelector() {
           <div className="space-y-6">
             <div className="relative pl-8">
               <div
-                className={`absolute top-0 left-0 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold transition-colors duration-300 ${isStep1Complete ? "bg-yellow-400 text-black" : "bg-black text-white"}`}
+                className={`absolute top-0 left-0 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold transition-colors duration-300 ${isStep1Complete ? "bg-[#74103e] text-white" : "bg-black text-white"}`}
               >
                 1
               </div>
@@ -452,7 +452,7 @@ function AdhesiveSelector() {
 
             <div className="relative pl-8">
               <div
-                className={`absolute top-0 left-0 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold transition-colors duration-300 ${isStep2Complete ? "bg-yellow-400 text-black" : "bg-black text-white"}`}
+                className={`absolute top-0 left-0 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold transition-colors duration-300 ${isStep2Complete ? "bg-[#74103e] text-white" : "bg-black text-white"}`}
               >
                 2
               </div>
@@ -482,7 +482,7 @@ function AdhesiveSelector() {
 
             <div className="relative pl-8">
               <div
-                className={`absolute top-0 left-0 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold transition-colors duration-300 ${currentStep === 3 ? "bg-yellow-400 text-black" : "bg-black text-white"}`}
+                className={`absolute top-0 left-0 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold transition-colors duration-300 ${currentStep === 3 ? "bg-[#74103e] text-white" : "bg-black text-white"}`}
               >
                 3
               </div>
@@ -513,7 +513,7 @@ function AdhesiveSelector() {
             {currentStep === 3 ? (
               <button
                 onClick={resetSelection}
-                className="px-4 py-2 text-sm md:text-base border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+                className="px-4 py-2 text-sm md:text-base border border-[#74103e] text-white rounded-lg bg-[#74103e] transition-colors cursor-pointer"
               >
                 Refresh / Start Again
               </button>
@@ -521,7 +521,7 @@ function AdhesiveSelector() {
               (currentStep > 1 || subStep > 1) && (
                 <button
                   onClick={goBack}
-                  className="px-4 py-2 text-sm md:text-base border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+                  className="px-4 py-2 text-sm md:text-base border border-[#74103e] text-white rounded-lg bg-[#74103e] transition-colors cursor-pointer"
                 >
                   ← BACK
                 </button>
@@ -539,7 +539,7 @@ function AdhesiveSelector() {
                     <button
                       key={category}
                       onClick={() => handleSelection("roomCategory", category)}
-                      className="p-4 rounded-xl border border-gray-200 hover:border-yellow-400 hover:bg-yellow-50 transition-all text-center group"
+                      className="p-4 rounded-xl border border-gray-200 hover:border-[#74103e] hover:bg-[#faebe3] transition-all text-center group"
                     >
                       <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">{data.icon}</div>
                       <div className="font-medium text-sm md:text-base">{category}</div>
@@ -554,7 +554,7 @@ function AdhesiveSelector() {
                     <button
                       key={room.name}
                       onClick={() => handleSelection("specificRoom", room.name)}
-                      className="p-4 rounded-xl border border-gray-200 hover:border-yellow-400 hover:bg-yellow-50 transition-all text-center group"
+                      className="p-4 rounded-xl border border-gray-200 hover:border-[#74103e] hover:bg-[#faebe3] transition-all text-center group"
                     >
                       <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">
                         {roomCategories[selections.roomCategory].icon}
@@ -571,7 +571,7 @@ function AdhesiveSelector() {
                     <button
                       key={area.name}
                       onClick={() => handleSelection("applicationArea", area.name)}
-                      className="p-6 rounded-xl border border-gray-200 hover:border-yellow-400 hover:bg-yellow-50 transition-all text-center group"
+                      className="p-6 rounded-xl border border-gray-200 hover:border-[#74103e] hover:bg-[#faebe3] transition-all text-center group"
                     >
                       <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">
                         {area.name === "Floor" ? "🏠" : "🧱"}
@@ -594,7 +594,7 @@ function AdhesiveSelector() {
                     <button
                       key={substrate.name}
                       onClick={() => handleSelection("substrateType", substrate.name)}
-                      className="p-4 rounded-xl border border-gray-200 hover:border-yellow-400 hover:bg-yellow-50 transition-all text-center"
+                      className="p-4 rounded-xl border border-gray-200 hover:border-[#74103e] hover:bg-[#faebe3] transition-all text-center"
                     >
                       <div className="text-sm md:text-base font-medium">{substrate.name}</div>
                     </button>
@@ -608,7 +608,7 @@ function AdhesiveSelector() {
                     <button
                       key={tile.name}
                       onClick={() => handleSelection("tileType", tile.name)}
-                      className="p-4 rounded-xl border border-gray-200 hover:border-yellow-400 hover:bg-yellow-50 transition-all text-center"
+                      className="p-4 rounded-xl border border-gray-200 hover:border-[#74103e] hover:bg-[#faebe3] transition-all text-center"
                     >
                       <div className="text-sm md:text-base font-medium">{tile.name}</div>
                     </button>
@@ -622,7 +622,7 @@ function AdhesiveSelector() {
                     <button
                       key={size.name}
                       onClick={() => handleSelection("tileSize", size.name)}
-                      className="p-4 rounded-xl border border-gray-200 hover:border-yellow-400 hover:bg-yellow-50 transition-all text-center"
+                      className="p-4 rounded-xl border border-gray-200 hover:border-[#74103e] hover:bg-[#faebe3] transition-all text-center"
                     >
                       <div className="text-sm md:text-base font-medium">{size.name}</div>
                     </button>
@@ -640,10 +640,10 @@ function AdhesiveSelector() {
                 .map((product, index) => (
                   <div
                     key={index}
-                    className="bg-gray-50 rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl"
+                    className="bg-[#faebe3] rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl"
                   >
                     <div
-                      className={`p-4 font-bold text-white text-center ${product.type.startsWith("Best") || product.type.startsWith("Premium") ? "bg-gray-600" : "bg-gray-600"}`}
+                      className={`p-4 font-bold text-white text-center ${product.type.startsWith("Best") || product.type.startsWith("Premium") ? "bg-[#74103e]" : "bg-[#74103e]"}`}
                     >
                       {product.type}
                     </div>
@@ -660,13 +660,13 @@ function AdhesiveSelector() {
                       <div className="flex flex-col sm:flex-row gap-2">
                         <button
                           onClick={openWhatsApp}
-                          className="bg-white text-black  px-4 py-2 rounded-lg shadow hover:bg-black hover:text-white border hover:border-[#E5A025] cursor-pointer"
+                          className="bg-white text-black  px-4 py-2 rounded-lg shadow hover:bg-[#74103e] hover:text-white border hover:border-[#74103e] cursor-pointer"
                         >
                           CONTACT US
                         </button>
                         <button
                           onClick={() => navigate(`/products/${product.slug}`)}
-                          className="bg-gray-200 text-black  px-4 py-2 rounded-lg shadow hover:bg-black hover:text-white border hover:border-[#E5A025] cursor-pointer"
+                          className="bg-gray-200 text-black  px-4 py-2 rounded-lg shadow hover:bg-[#74103e] hover:text-white border hover:border-[#74103e] cursor-pointer"
                         >
                           VIEW PRODUCT
                         </button>

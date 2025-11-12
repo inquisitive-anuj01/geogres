@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const PrivacyPolicy = () => {
   return (
-    <section className="bg-[#e6dcd5] text-black py-16 px-6 md:px-20 relative mb-10 mt-20">
+    <section className="bg-[#faebe3] text-black py-16 px-6 md:px-20 relative mb-10 mt-20">
       <div className="max-w-6xl mx-auto">
         {/* Title with animation */}
         <motion.h1
@@ -12,8 +12,8 @@ const PrivacyPolicy = () => {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-bold text-center mb-10"
         >
-          Privacy <span className="text-[#E5A025]">Policy</span>
-          <div className="w-16 h-0.5 bg-[#E5A025] mx-auto rounded-full mt-4"></div>
+          Privacy <span className="text-[#74103e]">Policy</span>
+          <div className="w-16 h-0.5 bg-[#74103e] mx-auto rounded-full mt-4"></div>
         </motion.h1>
 
         {/* Content with animation */}

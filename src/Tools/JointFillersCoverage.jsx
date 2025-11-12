@@ -162,7 +162,7 @@ function JointFillersCoverage() {
   }, [totalArea, areaUnit, tileWidth, tileLength, totalLength, lengthUnit, jointWidth, tileThickness])
 
   return (
-    <div className="w-full min-h-screen mx-auto bg-[#e6dcd5] overflow-hidden p-6 rounded-b-3xl mb-16 mt-20">
+    <div className="w-full min-h-screen mx-auto bg-[#faebe3] overflow-hidden p-6 rounded-b-3xl mb-16 mt-20">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-8">
@@ -180,7 +180,7 @@ function JointFillersCoverage() {
                 {/* Step 1: Area Input and Length Input Side by Side */}
                 <div className="mb-8">
                   <div className="flex items-center gap-2 mb-4">
-                    <div className="w-6 h-6 bg-[#E5A025] rounded-full flex items-center justify-center text-sm font-bold">
+                    <div className="w-6 h-6 bg-[#74103e]  rounded-full flex items-center justify-center text-sm font-bold text-white">
                       1
                     </div>
                     <h3 className="text-lg font-semibold">Enter Area, Tile Width & Length</h3>
@@ -212,7 +212,7 @@ function JointFillersCoverage() {
                             </SelectContent>
                           </Select>
                         </div>
-                        {errors.totalArea && <p className="text-red-400 text-xs mt-1">{errors.totalArea}</p>}
+                        {errors.totalArea && <p className="text-[#74103e] text-xs mt-1">{errors.totalArea}</p>}
                       </div>
 
                       <div>
@@ -228,13 +228,13 @@ function JointFillersCoverage() {
                             placeholder="enter tile width"
                             min="1"
                             max="5000"
-                            className="bg-white text-black transition-all duration-200 focus:ring-2 focus:ring-[#E5A025] text-sm"
+                            className="bg-white text-black transition-all duration-200 focus:ring-2 focus:ring-[#74103e] text-sm"
                           />
                           <div className="w-12 bg-gray-200 rounded-md flex items-center justify-center text-black text-xs">
                             mm
                           </div>
                         </div>
-                        {errors.tileWidth && <p className="text-red-400 text-xs mt-1">{errors.tileWidth}</p>}
+                        {errors.tileWidth && <p className="text-[#74103e] text-xs mt-1">{errors.tileWidth}</p>}
                       </div>
 
                       <div>
@@ -250,33 +250,33 @@ function JointFillersCoverage() {
                             placeholder="enter tile length"
                             min="1"
                             max="5000"
-                            className="bg-white text-black transition-all duration-200 focus:ring-2 focus:ring-[#E5A025] text-sm"
+                            className="bg-white text-black transition-all duration-200 focus:ring-2 focus:ring-[#74103e] text-sm"
                           />
                           <div className="w-12 bg-gray-200 rounded-md flex items-center justify-center text-black text-xs">
                             mm
                           </div>
                         </div>
-                        {errors.tileLength && <p className="text-red-400 text-xs mt-1">{errors.tileLength}</p>}
+                        {errors.tileLength && <p className="text-[#74103e] text-xs mt-1">{errors.tileLength}</p>}
                       </div>
                     </div>
 
                     {/* OR Divider - Hidden on mobile, visible on large screens */}
                     <div className="hidden lg:flex lg:flex-col lg:items-center lg:justify-center lg:px-4">
-                      <div className="w-px h-16 bg-[#E5A025] mb-2"></div>
-                      <div className="w-8 h-8 bg-[#E5A025] rounded-full flex items-center justify-center text-white font-bold text-sm">
+                      <div className="w-px h-16 bg-[#74103e] mb-2"></div>
+                      <div className="w-8 h-8 bg-[#74103e] rounded-full flex items-center justify-center text-white font-bold text-sm">
                         OR
                       </div>
-                      <div className="w-px h-16 bg-[#E5A025] mt-2"></div>
+                      <div className="w-px h-16 bg-[#74103e] mt-2"></div>
                     </div>
 
                     {/* Mobile OR Divider */}
                     <div className="lg:hidden my-6">
                       <div className="flex items-center gap-4">
-                        <div className="flex-1 h-px bg-[#E5A025]"></div>
-                        <div className="w-8 h-8 bg-[#E5A025] rounded-full flex items-center justify-center text-white font-bold text-sm">
+                        <div className="flex-1 h-px bg-[#74103e]"></div>
+                        <div className="w-8 h-8 bg-[#74103e] rounded-full flex items-center justify-center text-white font-bold text-sm">
                           OR
                         </div>
-                        <div className="flex-1 h-px bg-[#E5A025]"></div>
+                        <div className="flex-1 h-px bg-[#74103e]"></div>
                       </div>
                     </div>
 
@@ -294,7 +294,7 @@ function JointFillersCoverage() {
                             value={totalLength}
                             onChange={(e) => setTotalLength(e.target.value)}
                             placeholder="0"
-                            className="bg-white text-black transition-all duration-200 focus:ring-2 focus:ring-[#E5A025] text-sm"
+                            className="bg-white text-black transition-all duration-200 focus:ring-2 focus:ring-[#74103e] text-sm"
                           />
                           <Select value={lengthUnit} onValueChange={setLengthUnit}>
                             <SelectTrigger className="w-12 bg-white text-black text-sm">
@@ -306,7 +306,7 @@ function JointFillersCoverage() {
                             </SelectContent>
                           </Select>
                         </div>
-                        {errors.totalLength && <p className="text-red-400 text-xs mt-1">{errors.totalLength}</p>}
+                        {errors.totalLength && <p className="text-[#74103e] text-xs mt-1">{errors.totalLength}</p>}
                       </div>
                     </div>
                   </div>
@@ -315,7 +315,7 @@ function JointFillersCoverage() {
                 {/* Step 2: Joint Specifications */}
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-4">
-                    <div className="w-6 h-6 bg-[#E5A025] rounded-full flex items-center justify-center text-sm font-bold">
+                    <div className="w-6 h-6 bg-[#74103e] rounded-full flex items-center justify-center text-sm font-bold text-white">
                       2
                     </div>
                     <h3 className="text-lg font-semibold">Enter Joint Width & Tile Thickness</h3>
@@ -335,13 +335,13 @@ function JointFillersCoverage() {
                           placeholder="Enter joint width"
                           min="1"
                           max="5000"
-                          className="bg-white text-black transition-all duration-200 focus:ring-2 focus:ring-[#E5A025] text-sm"
+                          className="bg-white text-black transition-all duration-200 focus:ring-2 focus:ring-[#74103e] text-sm"
                         />
                         <div className="w-12 bg-gray-200 rounded-md flex items-center justify-center text-black text-xs">
                           mm
                         </div>
                       </div>
-                      {errors.jointWidth && <p className="text-red-400 text-xs mt-1">{errors.jointWidth}</p>}
+                      {errors.jointWidth && <p className="text-[#74103e] text-xs mt-1">{errors.jointWidth}</p>}
                     </div>
 
                     <div>
@@ -357,13 +357,13 @@ function JointFillersCoverage() {
                           placeholder="Enter tile thickness"
                           min="1"
                           max="5000"
-                          className="bg-white text-black transition-all duration-200 focus:ring-2 focus:ring-[#E5A025] text-sm"
+                          className="bg-white text-black transition-all duration-200 focus:ring-2 focus:ring-[#74103e] text-sm"
                         />
                         <div className="w-12 bg-gray-200 rounded-md flex items-center justify-center text-black text-xs">
                           mm
                         </div>
                       </div>
-                      {errors.tileThickness && <p className="text-red-400 text-xs mt-1">{errors.tileThickness}</p>}
+                      {errors.tileThickness && <p className="text-[#74103e] text-xs mt-1">{errors.tileThickness}</p>}
                     </div>
                   </div>
                 </div>
@@ -385,8 +385,8 @@ function JointFillersCoverage() {
 
                 {!showResults ? (
                   <div className="flex-1 flex flex-col items-center justify-center text-center py-8">
-                    <Search className="w-12 h-12 text-gray-300 mb-3 animate-pulse" />
-                    <p className="text-gray-500 text-xs">
+                    <Search className="w-12 h-12 text-[#74103e] mb-3 animate-pulse" />
+                    <p className="text-black text-xs">
                       Fill in the requirements on the left to display the quantity required
                     </p>
                   </div>
@@ -398,7 +398,7 @@ function JointFillersCoverage() {
                         return (
                           <div
                             key={product.id}
-                            className="text-center p-2 bg-[#ccb9ad] rounded-lg hover:bg-[#b09c8d] transition-colors duration-200"
+                            className="text-center p-2 bg-[#ccb9ad] rounded-lg hover:bg-[#faebe3] transition-colors duration-200"
                           >
                             <img
                               src={product.image || "/placeholder.svg"}
@@ -422,14 +422,14 @@ function JointFillersCoverage() {
                           onClick={openWhatsApp}
                           variant="outline"
                           size="sm"
-                          className="bg-white text-black  px-4 py-2 rounded-lg shadow hover:bg-black hover:text-white border hover:border-[#E5A025] cursor-pointer"
+                          className="bg-white text-black  px-4 py-2 rounded-lg shadow hover:bg-[#74103e] hover:text-white border hover:border-[#74103e] cursor-pointer"
                         >
                           GET IN TOUCH WITH US
                         </Button>
                         <Button
                           onClick={() => navigate("/category/epoxy-grout")}
                           size="sm"
-                          className="bg-gray-200 text-black  px-4 py-2 rounded-lg shadow hover:bg-black hover:text-white border hover:border-[#E5A025] cursor-pointer"
+                          className="bg-gray-200 text-black  px-4 py-2 rounded-lg shadow hover:bg-[#74103e] hover:text-white border hover:border-[#74103e] cursor-pointer"
                         >
                           View products
                         </Button>

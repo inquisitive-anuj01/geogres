@@ -415,7 +415,7 @@ const JointFillersVisuals = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#e6dcd5] font-sans text-gray-800 flex flex-col mb-14">
+    <div className="min-h-screen bg-[#faebe3] font-sans text-gray-800 flex flex-col mb-14">
       <div className="flex-1 p-4 sm:p-8 mt-20">
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
@@ -468,9 +468,9 @@ const JointFillersVisuals = () => {
                         key={index}
                         onClick={() => handleColorSelect(color.hex)}
                         title={color.name}
-                        className={`w-full aspect-square rounded-md border border-gray-300 cursor-pointer transition-transform duration-200 hover:scale-110 shadow-sm ${
+                        className={`w-full aspect-square rounded-md border border-[#faebe3] cursor-pointer transition-transform duration-200 hover:scale-110 shadow-sm ${
                           jointColor === color.hex
-                            ? "ring-2 ring-blue-500 ring-offset-2"
+                            ? "ring-2 ring-[#74103e] ring-offset-2"
                             : ""
                         }`}
                         style={{ backgroundColor: color.hex }}
@@ -491,7 +491,7 @@ const JointFillersVisuals = () => {
                 </div>
                 <div className="relative">
                   <select
-                    className="block w-full px-2 py-1 text-sm rounded-lg border border-gray-300 bg-gray-200 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="block w-full px-2 py-1 text-sm rounded-lg border border-gray-300 bg-gray-200 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#74103e] focus:border-[#74103e]"
                     value={jointSize}
                     onChange={(e) => setJointSize(e.target.value)}
                   >
@@ -517,7 +517,7 @@ const JointFillersVisuals = () => {
                     title="No Sparkle"
                     className={`w-10 h-10 rounded-md border border-gray-300 cursor-pointer transition-transform duration-200 hover:scale-110 shadow-sm flex items-center justify-center ${
                       selectedSparkleUrl === null
-                        ? "ring-2 ring-blue-500 ring-offset-2"
+                        ? "ring-2 ring-[#74103e] ring-offset-2"
                         : ""
                     }`}
                   >
@@ -530,7 +530,7 @@ const JointFillersVisuals = () => {
                       title={sparkle.name}
                       className={`w-10 h-10 rounded-md border border-gray-300 cursor-pointer transition-transform duration-200 hover:scale-110 shadow-sm overflow-hidden flex items-center justify-center ${
                         selectedSparkleUrl === sparkle.url
-                          ? "ring-2 ring-blue-500 ring-offset-2"
+                          ? "ring-2 ring-[#74103e] ring-offset-2"
                           : ""
                       }`}
                     >
@@ -553,7 +553,7 @@ const JointFillersVisuals = () => {
                 <h3 className="text-lg font-medium mb-2">3. TILE SIZE</h3>
                 <div className="relative">
                   <select
-                    className="block w-full px-2 py-1 text-sm rounded-lg border border-gray-300 bg-gray-200 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="block w-full px-2 py-1 text-sm rounded-lg border border-gray-300 bg-gray-200 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#74103e]  focus:border-[#74103e]"
                     value={tileSize}
                     onChange={(e) => setTileSize(e.target.value)}
                   >
@@ -578,7 +578,7 @@ const JointFillersVisuals = () => {
                       value="square"
                       checked={tileType === "square"}
                       onChange={() => setTileType("square")}
-                      className="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500"
+                      className="w-4 h-4 text-[#74103e] bg-gray-100 border-gray-300 focus:[#74103e]"
                     />
                     <span className="text-sm">Square</span>
                   </label>
@@ -642,7 +642,7 @@ const JointFillersVisuals = () => {
                       value="wall"
                       checked={surface === "wall"}
                       onChange={() => setSurface("wall")}
-                      className="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500"
+                      className="w-4 h-4  bg-gray-100 border-gray-300 "
                     />
                     <span className="text-sm">Wall</span>
                   </label>
@@ -704,7 +704,7 @@ const JointFillersVisuals = () => {
               {isTemplateSelected && (
                 <button
                   onClick={handleReset}
-                  className="mt-6 w-full py-3 rounded-lg bg-gray-600 text-white font-semibold shadow-md transition-transform duration-200 hover:scale-[1.01] hover:bg-gray-700 uppercase"
+                  className="mt-6 w-full py-3 rounded-lg bg-[#74103e] text-white font-semibold shadow-md transition-transform duration-200 hover:scale-[1.01]  uppercase cursor-pointer"
                 >
                   RESET STYLE
                 </button>
@@ -721,7 +721,7 @@ const JointFillersVisuals = () => {
               {isTemplateSelected && (
                 <div className="flex justify-end items-center w-full mb-4">
                   <div className="flex items-center space-x-4">
-                    <div className="bg-[#E5A025] text-black px-3 py-1 rounded-full text-sm font-medium">
+                    <div className="bg-[#74103e] text-white px-3 py-1 rounded-full text-sm font-medium">
                       {surface === "floor"
                         ? "FLOOR"
                         : surface === "wall"
@@ -729,12 +729,12 @@ const JointFillersVisuals = () => {
                         : ""}
                     </div>
                     {/* Display the selected color name */}
-                    <div className="bg-[#E5A025] text-black px-3 py-1 rounded-full text-sm font-medium">
+                    <div className="bg-[#74103e] text-white px-3 py-1 rounded-full text-sm font-medium">
                       {selectedColorName}
                     </div>
                     {/* Display the selected sparkle name if it exists */}
                     {selectedSparkleUrl && (
-                      <div className="bg-[#E5A025] text-black px-3 py-1 rounded-full text-sm font-medium">
+                      <div className="bg-[#74103e] text-white px-3 py-1 rounded-full text-sm font-medium">
                         {
                           sparkleImages.find(
                             (s) => s.url === selectedSparkleUrl
@@ -847,7 +847,7 @@ const JointFillersVisuals = () => {
                   <div className="flex justify-center mt-8 ">
                     <button
                       onClick={handleDownload}
-                      className="bg-[#E5A025] text-black  font-semibold py-2 px-4 rounded-full shadow-md hover:bg-[#9d680c] transition-colors duration-200 uppercase cursor-pointer"
+                      className="bg-[#74103e] text-white  font-semibold py-2 px-4 rounded-full shadow-md  transition-colors duration-200 uppercase cursor-pointer"
                     >
                       DOWNLOAD THIS IMAGE
                     </button>

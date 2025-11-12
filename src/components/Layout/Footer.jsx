@@ -296,7 +296,7 @@ const Footer = () => {
               href="https://inquisitivedigital.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#faebe3] transition-colors duration-300"
+              className="hover:text-[#74103e] transition-colors duration-300"
             >
               <span className="font-bold">Inquisitive Digital</span>
             </a>

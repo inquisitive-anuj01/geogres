@@ -25,7 +25,7 @@ const BulletList = ({ title, items }) => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.03 }}
-            className="flex items-start bg-[#ccb9ad] border border-yellow-200 rounded-lg p-2 shadow-sm hover:shadow-md transition"
+            className="flex items-start bg-[#ccb9ad] border border-[#74103e] rounded-lg p-2 shadow-sm hover:shadow-md transition"
           >
             <span className="mr-2 text-black">•</span>
             <span className="text-black">{it}</span>
@@ -67,7 +67,7 @@ export default function DiscoverSolutionsDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-[#e6dcd5] py-16 px-4 sm:px-6 lg:px-8 mb-10 mt-20">
+    <div className="min-h-screen bg-[#faebe3] py-16 px-4 sm:px-6 lg:px-8 mb-10 mt-20">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
         {/* LEFT: Problem Section */}
         <div>
@@ -106,7 +106,7 @@ export default function DiscoverSolutionsDetail() {
         {/* RIGHT: Recommended Solution Section */}
         <div>
           {solution.recommendedSol && (
-            <div className="bg-green-50 border border-green-200 p-5 rounded-lg shadow-sm">
+            <div className="bg-[#74103e]/20 border  p-5 rounded-lg shadow-sm">
               <h2 className="text-xl font-bold text-gray-900 mb-3">
                 Recommended Solution
               </h2>
@@ -127,7 +127,7 @@ export default function DiscoverSolutionsDetail() {
                   {solution.recommendedbutton1slug && (
                     <button
                       onClick={() => navigate(`/${solution.recommendedbutton1slug}`)}
-                      className="bg-white text-black px-4 py-2 rounded-lg shadow hover:bg-black hover:text-white border border-[#E5A025] transition cursor-pointer"
+                      className="bg-white text-black px-4 py-2 rounded-lg shadow hover:bg-[#74103e] hover:text-white border border-[#74103e] transition cursor-pointer"
                     >
                       View Product
                     </button>
@@ -146,7 +146,7 @@ export default function DiscoverSolutionsDetail() {
                   {solution.recommendedbutton2slug && (
                     <button
                       onClick={() => navigate(`/${solution.recommendedbutton2slug}`)}
-                      className="bg-white text-black px-4 py-2 rounded-lg shadow hover:bg-black hover:text-white border border-[#E5A025] transition cursor-pointer"
+                      className="bg-white text-black px-4 py-2 rounded-lg shadow hover:bg-[#74103e] hover:text-white border border-[#74103e] transition cursor-pointer"
                     >
                       View Product
                     </button>

@@ -49,7 +49,7 @@ const FieldRow = ({ label, value }) => {
       initial={{ opacity: 0, y: 6 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="bg-[#ccb9ad] border border-yellow-200 p-4 rounded-lg shadow-sm hover:shadow-md transition"
+      className="bg-[#ccb9ad] border border-[#74103e] p-4 rounded-lg shadow-sm hover:shadow-md transition"
     >
       <p className="text-sm font-medium text-black">{label}</p>
       <p className="text-black font-semibold mt-1 leading-relaxed">
@@ -72,9 +72,9 @@ const BulletList = ({ title, items, checkmark = false }) => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.03 }}
-            className="flex items-start bg-[#ccb9ad] border border-yellow-200 rounded-lg p-3 shadow-sm hover:shadow-md transition"
+            className="flex items-start bg-[#ccb9ad] border border-[#74103e] rounded-lg p-3 shadow-sm hover:shadow-md transition"
           >
-            <span className="mr-2 text-gray-900">{checkmark ? "✔" : "•"}</span>
+            <span className="mr-2 text-[#74103e]">{checkmark ? "✔" : "•"}</span>
             <span className="text-black">{it}</span>
           </motion.li>
         ))}
@@ -158,7 +158,7 @@ export default function ProductDetail() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-800" />
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#74103e]" />
       </div>
     );
   }
@@ -207,7 +207,7 @@ export default function ProductDetail() {
                     onClick={() => setActiveImage(idx)}
                     className={`w-24 h-24 rounded-xl border-2 p-1 transition ${
                       activeImage === idx
-                        ? "border-gray-900 shadow"
+                        ? "border-[#74103e] shadow"
                         : "border-transparent hover:border-gray-400"
                     } bg-[#ccb9ad]`}
                     aria-label={`thumbnail ${idx + 1}`}
@@ -262,7 +262,7 @@ export default function ProductDetail() {
               initial={{ y: 14, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="mt-8 bg-[#ccb9ad] border border-yellow-400 hover:bg-[#b09c8d] rounded-xl p-6 shadow-sm hover:shadow-md transition"
+              className="mt-8 bg-[#ccb9ad] border border-[#74103e] hover:bg-[#b09c8d] rounded-xl p-6 shadow-sm hover:shadow-md transition"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 Interested in this product?
@@ -272,7 +272,7 @@ export default function ProductDetail() {
               </p>
               <button
                 onClick={handleClick}
-                className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-medium transition-colors cursor-pointer"
+                className="bg-[#74103e]  text-white px-6 py-3 rounded-lg font-medium transition-colors cursor-pointer"
               >
                 Request Quote
               </button>
@@ -327,7 +327,7 @@ export default function ProductDetail() {
                     initial={{ opacity: 0, y: 8 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="bg-[#ccb9ad] border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition"
+                    className="bg-[#ccb9ad] border border-[#74103e] rounded-xl p-5 shadow-sm hover:shadow-md transition"
                   >
                     <p className="font-semibold text-black mb-1">{k.name}</p>
                     <p className="text-black text-sm leading-relaxed">

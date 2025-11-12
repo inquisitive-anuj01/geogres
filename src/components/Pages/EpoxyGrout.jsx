@@ -19,7 +19,7 @@ const EpoxyGrout = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#e6dcd5] mb-12 mt-20">
+    <div className="min-h-screen bg-[#faebe3] mb-12 mt-20">
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -28,7 +28,7 @@ const EpoxyGrout = () => {
         className="text-center py-16 px-6"
       >
         <h1 className="text-5xl font-bold text-gray-900 mb-4 uppercase">
-          <span className="text-[#E5A025]">Grouting </span>Solutions
+          <span className="text-[#74103e]">Grouting </span>Solutions
         </h1>
         <p className="text-lg text-black max-w-3xl mx-auto leading-relaxed">
           Premium grouting solutions for perfect tile joints. Our epoxy grouts
@@ -79,12 +79,12 @@ const EpoxyGrout = () => {
                     )}
                     {product.packaging && (
                       <span className="flex items-center gap-1 bg-gray-100  text-xs font-bold px-3 py-1 rounded-full">
-                        <Package size={14} className="text-[#E5A025]" /> {product.packaging}
+                        <Package size={14} className="text-[#74103e]" /> {product.packaging}
                       </span>
                     )}
                     {product.shelfLife && (
                       <span className="flex items-center gap-1 bg-gray-100  text-xs font-bold px-3 py-1 rounded-full">
-                        <Hourglass size={14} className="text-amber-900" /> Long Shelf Life
+                        <Hourglass size={14} className="text-[#74103e]" /> Long Shelf Life
                       </span>
                     )}
                   </div>
@@ -94,7 +94,7 @@ const EpoxyGrout = () => {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="px-5 py-2 text-sm font-medium text-black border hover:border-[#E5A025] hover:bg-black hover:text-white rounded-full shadow-md hover:shadow-lg transition cursor-pointer"
+                      className="px-5 py-2 text-sm font-medium text-black border hover:border-[#74103e] hover:bg-[#74103e] hover:text-white rounded-full shadow-md hover:shadow-lg transition cursor-pointer"
                     >
                       View Details →
                     </motion.button>

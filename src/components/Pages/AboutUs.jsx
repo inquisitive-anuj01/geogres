@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const AboutUs = () => {
   return (
-    <section className="bg-[#e6dcd5] text-black py-16 px-6 md:px-20 relative z-40 mb-10 mt-20 ">
+    <section className="bg-[#faebe3] text-black py-16 px-6 md:px-20 relative z-40 mb-10 mt-20 ">
       <div className="max-w-6xl mx-auto">
         {/* Title */}
         <motion.h2
@@ -13,8 +13,8 @@ const AboutUs = () => {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-bold text-center mb-10"
         >
-          About <span className="text-[#E5A025]">GeoGres</span>
-          <div className="w-16 h-0.5 bg-[#E5A025] mx-auto rounded-full mt-4"></div>
+          About <span className="text-[#74103e]">GeoGres</span>
+          <div className="w-16 h-0.5 bg-[#74103e] mx-auto rounded-full mt-4"></div>
         </motion.h2>
 
         {/* Content */}
@@ -42,8 +42,8 @@ const AboutUs = () => {
           </p>
 
           <p>
-            With over <span className="text-[#E5A025] font-semibold"> 10+ manufacturing plants</span> {" "}  
-            and <span className="text-[#E5A025] font-semibold">300+ trained experts</span>, 
+            With over <span className="text-[#74103e] font-semibold"> 10+ manufacturing plants</span> {" "}  
+            and <span className="text-[#74103e] font-semibold">300+ trained experts</span>, 
             we are fully equipped to provide on-site technical assistance,
             product recommendations, sample testing, and problem resolution -
             empowering contractors, architects, and builders to achieve
@@ -58,7 +58,7 @@ const AboutUs = () => {
             every project.
           </p>
 
-          <p className="italic text-[#E5A025]">
+          <p className="italic text-[#74103e]">
             “Our vision is not just to build stronger bonds but to build
             stronger relationships that last a lifetime.”
           </p>

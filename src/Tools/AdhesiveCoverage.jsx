@@ -110,7 +110,7 @@ const AdhesiveCoverage = () => {
 
   return (
     <div>
-      <div className="w-full min-h-screen mx-auto bg-[#e6dcd5] font-sans text-gray-800 overflow-hidden p-6 rounded-b-3xl mb-16 mt-20">
+      <div className="w-full min-h-screen mx-auto bg-[#faebe3] font-sans text-gray-800 overflow-hidden p-6 rounded-b-3xl mb-16 mt-20">
         <h1 className="text-xl md:text-5xl font-semibold text-center text-black mb-2">
           Adhesive Coverage Calculator
         </h1>
@@ -126,7 +126,7 @@ const AdhesiveCoverage = () => {
             <div>
               <h2
                 className={`text-2xl font-bold mb-4 ${
-                  activeStep === 1 ? "text-black" : "text-[#E5A025]"
+                  activeStep === 1 ? "text-black" : "text-[#74103e]"
                 }`}
               >
                 1- Select Adhesive
@@ -139,8 +139,8 @@ const AdhesiveCoverage = () => {
                     className={`relative p-4 rounded-xl border-2 transition-transform transform hover:scale-105 
                       ${
                         selectedAdhesive && selectedAdhesive.id === adhesive.id
-                          ? "border-[#E5A025] bg-white"
-                          : "border-gray-700 bg-[#e6dcd5] hover:border-[#E5A025] "
+                          ? "border-[#74103e] bg-white"
+                          : "border-gray-700 bg-[#e6dcd5] hover:border-[#74103e] "
                       }
                       focus:outline-none `}
                   >
@@ -157,7 +157,7 @@ const AdhesiveCoverage = () => {
               <div>
                 <h2
                   className={`text-2xl font-bold mb-4 ${
-                    activeStep === 2 ? "text-black" : "text-[#E5A025]"
+                    activeStep === 2 ? "text-black" : "text-[#74103e]"
                   }`}
                 >
                   2 Enter Area
@@ -184,7 +184,7 @@ const AdhesiveCoverage = () => {
               <div>
                 <h2
                   className={`text-2xl font-bold mb-4  ${
-                    activeStep === 3 ? "text-[#E5A025]" : "text-[#E5A025]"
+                    activeStep === 3 ? "text-[#74103e]" : "text-[#74103e]"
                   }`}
                 >
                   3 Select Thickness
@@ -225,7 +225,7 @@ const AdhesiveCoverage = () => {
                 />
 
                 {/*  Bags Needed */}
-                <div className="bg-white border border-[#fabd50] text-[#fabd50] px-6 py-3 rounded-xl mb-4 shadow-md">
+                <div className="bg-white border border-[#74103e] text-[#74103e] px-6 py-3 rounded-xl mb-4 shadow-md">
                   <p className="text-2xl font-bold">
                     {Math.ceil(requiredKgs / 20)} Bags Needed
                   </p>
@@ -247,13 +247,13 @@ const AdhesiveCoverage = () => {
                 <div className="flex gap-4">
                   <button
                     onClick={openWhatsApp}
-                    className="bg-white text-black  px-4 py-2 rounded-lg shadow hover:bg-black hover:text-white border hover:border-[#E5A025] cursor-pointer"
+                    className="bg-white text-black  px-4 py-2 rounded-lg shadow hover:bg-[#74103e] hover:text-white border hover:border-[#74103e] cursor-pointer"
                   >
                     Contact Us
                   </button>
                   <button
                     onClick={handleViewDetails}
-                    className="bg-gray-200 text-black  px-4 py-2 rounded-lg shadow hover:bg-black hover:text-white border hover:border-[#E5A025] cursor-pointer"
+                    className="bg-gray-200 text-black  px-4 py-2 rounded-lg shadow hover:bg-[#74103e] hover:text-white border hover:border-[#74103e] cursor-pointer"
                   >
                     View Product Details
                   </button>
@@ -262,7 +262,7 @@ const AdhesiveCoverage = () => {
             ) : (
               <div className="flex flex-col items-center justify-center text-center py-20">
                 <svg
-                  className="w-24 h-24 text-gray-400 mb-4"
+                  className="w-24 h-24 text-[#74103e] mb-4"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -275,7 +275,7 @@ const AdhesiveCoverage = () => {
                     d="M19 11H5m14 0a2 2 0 012 2v2a2 2 0 01-2 2h-4a2 2 0 01-2-2v-2a2 2 0 012-2h4zm-14 0a2 2 0 00-2 2v2a2 2 0 002 2h4a2 2 0 002-2v-2a2 2 0 00-2-2H5z"
                   ></path>
                 </svg>
-                <p className="text-gray-500">
+                <p className="text-black">
                   Fill in the requirements on the left to display the quantity
                   required
                 </p>
