@@ -1,64 +1,63 @@
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { useNavigate } from "react-router-dom"
-import { products } from "../ProductsInfo/heroProducts"
-import FloatingBubbles from "../Extra/FloatingBubbles"
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
+import { products } from "../ProductsInfo/heroProducts";
+import FloatingBubbles from "../Extra/FloatingBubbles";
 
 const NewHero = () => {
-  const navigate = useNavigate()
-  const [activeProduct, setActiveProduct] = useState(products[0].id)
-  const [selectedImage, setSelectedImage] = useState(products[0].mainImage)
-  const [imageKey, setImageKey] = useState(0)
-  const [selectedDescription, setSelectedDescription] = useState("")
-  const [selectedTitle, setSelectedTitle] = useState("")
-  const [isTransitioning, setIsTransitioning] = useState(false)
+  const navigate = useNavigate();
+  const [activeProduct, setActiveProduct] = useState(products[0].id);
+  const [selectedImage, setSelectedImage] = useState(products[0].mainImage);
+  const [imageKey, setImageKey] = useState(0);
+  const [selectedDescription, setSelectedDescription] = useState("");
+  const [selectedTitle, setSelectedTitle] = useState("");
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
-  const currentProduct = products.find((p) => p.id === activeProduct) || products[0]
+  const currentProduct =
+    products.find((p) => p.id === activeProduct) || products[0];
 
   const handleAccordionChange = (value) => {
-    if (isTransitioning) return
+    if (isTransitioning) return;
 
-    setIsTransitioning(true)
-    const newProduct = products.find((p) => p.id === value)
+    setIsTransitioning(true);
+    const newProduct = products.find((p) => p.id === value);
     if (newProduct) {
-      setActiveProduct(value)
-      setSelectedImage(newProduct.mainImage)
-      setSelectedDescription("")
-      setSelectedTitle("")
-      setImageKey((prev) => prev + 1)
+      setActiveProduct(value);
+      setSelectedImage(newProduct.mainImage);
+      setSelectedDescription("");
+      setSelectedTitle("");
+      setImageKey((prev) => prev + 1);
 
       setTimeout(() => {
-        setIsTransitioning(false)
-      }, 600)
+        setIsTransitioning(false);
+      }, 600);
     }
-  }
+  };
 
   const handleThumbnailClick = (thumb) => {
-    if (isTransitioning) return
+    if (isTransitioning) return;
 
-    setIsTransitioning(true)
-    setSelectedImage(thumb)
-    setSelectedDescription(thumb.description)
-    setSelectedTitle(thumb.title)
-    setImageKey((prev) => prev + 1)
+    setIsTransitioning(true);
+    setSelectedImage(thumb);
+    setSelectedDescription(thumb.description);
+    setSelectedTitle(thumb.title);
+    setImageKey((prev) => prev + 1);
 
     setTimeout(() => {
-      setIsTransitioning(false)
-    }, 500)
-  }
+      setIsTransitioning(false);
+    }, 500);
+  };
 
   const handleRedirect = () => {
     if (selectedImage?.slug) {
-      navigate(selectedImage.slug)
+      navigate(selectedImage.slug);
     }
-  }
+  };
 
   return (
     <section className="min-h-screen bg-[#faebe3] overflow-hidden flex items-center mt-12 lg:mt-10">
-      <div className="hidden lg:block">
-        {/* <FloatingBubbles /> */}
-      </div>
+      <div className="hidden lg:block">{/* <FloatingBubbles /> */}</div>
       <div className="max-w-auto mx-auto px-6 md:px-10 w-full">
         {/* MOBILE LAYOUT - Stacked vertically */}
         <div className="flex flex-col lg:hidden">
@@ -100,23 +99,23 @@ const NewHero = () => {
               ))}
             </div>
           </div>
+          <Button
+            onClick={handleRedirect}
+            className="bg-[#74103e] text-primary-foreground font-semibold px-6 py-2 rounded-lg cursor-pointer transition-transform duration-300 hover:scale-105 mx-auto text-sm mb-10"
+          >
+            VIEW PRODUCTS
+          </Button>
 
           {/* CONTENT SECTION - Below thumbnails for mobile */}
           <div className="flex flex-col space-y-3 mb-4 text-center">
-            <h1 className="text-2xl font-semibold text-foreground leading-tight transition-all duration-500 ease-in-out">
+            <h1 className="text-3xl md:text-4xl font-bold text-foreground leading-tight transition-all duration-500 ease-in-out">
               {selectedTitle || currentProduct.title}
             </h1>
 
-            <p className="text-sm text-muted-foreground transition-all duration-500 ease-in-out px-2">
+            {/* Description - Better constrained and readable */}
+            <p className="text-base md:text-lg text-muted-foreground transition-all duration-500 ease-in-out leading-relaxed max-w-md mx-auto">
               {selectedDescription || currentProduct.description}
             </p>
-
-            <Button
-              onClick={handleRedirect}
-              className="bg-[#74103e] text-primary-foreground font-semibold px-6 py-2 rounded-lg cursor-pointer transition-transform duration-300 hover:scale-105 mx-auto text-sm"
-            >
-              VIEW PRODUCTS
-            </Button>
           </div>
 
           {/* ACCORDION - Bottom for mobile with increased height */}
@@ -169,7 +168,9 @@ const NewHero = () => {
                         textOrientation: "mixed",
                       }}
                       initial={{ opacity: 1 }}
-                      animate={{ opacity: activeProduct === product.id ? 0 : 1 }}
+                      animate={{
+                        opacity: activeProduct === product.id ? 0 : 1,
+                      }}
                       transition={{ duration: 0.3 }}
                     >
                       {product.title}
@@ -185,8 +186,10 @@ const NewHero = () => {
         <div className="hidden lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* LEFT SECTION */}
           <div className="flex flex-col space-y-6 justify-between ml-4 lg:ml-12">
-            <div className="space-y-6 transition-opacity duration-500 ease-in-out" key={activeProduct}>
-              
+            <div
+              className="space-y-6 transition-opacity duration-500 ease-in-out"
+              key={activeProduct}
+            >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight transition-all duration-500 ease-in-out">
                 {selectedTitle || currentProduct.title}
               </h1>
@@ -251,7 +254,9 @@ const NewHero = () => {
                             textOrientation: "mixed",
                           }}
                           initial={{ opacity: 1 }}
-                          animate={{ opacity: activeProduct === product.id ? 0 : 1 }}
+                          animate={{
+                            opacity: activeProduct === product.id ? 0 : 1,
+                          }}
                           transition={{ duration: 0.3 }}
                         >
                           {product.title}
@@ -294,7 +299,9 @@ const NewHero = () => {
                 alt={selectedImage.alt}
                 className="max-w-full h-auto object-contain transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] transform"
                 style={{
-                  transform: isTransitioning ? "scale(0.95) translateX(10px)" : "scale(1) translateX(0)",
+                  transform: isTransitioning
+                    ? "scale(0.95) translateX(10px)"
+                    : "scale(1) translateX(0)",
                   opacity: isTransitioning ? 0.8 : 1,
                 }}
               />
@@ -303,7 +310,7 @@ const NewHero = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default NewHero
+export default NewHero;

@@ -13,7 +13,7 @@ import NewHero from '../Pages/NewHero'
 
 function Home() {
   return (
-    <div className='bg-[#faebe3]'>
+    <div className='bg-[#faebe3] w-full overflow-x-hidden'>
       <NewHero/>
       <Certification/>
       <ProductInfo/> 
