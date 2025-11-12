@@ -64,7 +64,7 @@ const NewHero = () => {
         <div className="flex flex-col lg:hidden">
           {/* MAIN IMAGE - Top for mobile with negative margin */}
           <div className="flex justify-center mb-3 -mt-6 ">
-            <div className="relative w-full max-w-xs right-[-20px]">
+            <div className="relative w-full max-w-xs right-[-35px]">
               <img
                 key={imageKey}
                 src={selectedImage.url || "/placeholder.svg"}
@@ -80,7 +80,7 @@ const NewHero = () => {
 
           {/* THUMBNAILS - Below main image for mobile with increased size */}
           <div className="flex justify-center gap-2 mb-4 px-4">
-            <div className="flex flex-wrap gap-3 justify-center">
+            <div className="flex gap-3 justify-start overflow-x-auto w-full max-w-xs py-2 scrollbar-hide">
               {currentProduct.thumbnails.map((thumb, index) => (
                 <button
                   key={`${activeProduct}-${index}`}
