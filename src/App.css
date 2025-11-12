@@ -1,24 +1,16 @@
-
-.sphere {
-  transform: translateZ(calc(var(--radius) * -1));
-  will-change: transform;
-  position: absolute;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform-style: preserve-3d;
-}
-
-.item__image {
-  position: absolute;
-  inset: 10px;
-  border-radius: var(--tile-radius, 12px);
-  overflow: hidden;
-  cursor: pointer;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transition: transform 300ms;
-  pointer-events: auto;
-  -webkit-transform: translateZ(0);
+/* Add this to your global CSS or App.css */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   transform: translateZ(0);
-  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
+
+/* Ensure body has proper padding for fixed header */
+/* body {
+  padding-top: 200px; 
+} */
