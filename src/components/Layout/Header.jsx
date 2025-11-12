@@ -443,11 +443,11 @@ const Header = () => {
       </header>
 
       {(isMobileMenuOpen || showOverlay || isOverlayAnimatingOut) && (
-        <div className="fixed inset-0 z-60 lg:hidden">
+        <div className="fixed inset-0 z-1001 lg:hidden">
           {/* Overlay */}
           {(showOverlay || isOverlayAnimatingOut) && (
             <div
-              className={`fixed inset-0 bg-gray-900 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+              className={`fixed inset-0  bg-gray-900 transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] ${
                 showOverlay && !isOverlayAnimatingOut
                   ? "translate-x-0 opacity-70"
                   : "-translate-x-full opacity-0"
