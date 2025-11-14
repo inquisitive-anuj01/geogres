@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { products } from "../ProductsInfo/heroProducts";
-import FloatingBubbles from "../Extra/FloatingBubbles";
 
 const NewHero = () => {
   const navigate = useNavigate();
@@ -57,11 +56,11 @@ const NewHero = () => {
 
   return (
     <section className="min-h-screen bg-[#faebe3] overflow-hidden flex items-center mt-12 lg:mt-10">
-      <div className="hidden lg:block">{/* <FloatingBubbles /> */}</div>
       <div className="max-w-auto mx-auto px-6 md:px-10 w-full">
-        {/* MOBILE LAYOUT - Stacked vertically */}
+
+        {/* MOBILE LAYOUT */}
         <div className="flex flex-col lg:hidden">
-          {/* MAIN IMAGE - Top for mobile with negative margin */}
+          {/* MAIN IMAGE*/}
           <div className="flex justify-center mb-3 -mt-6 ">
             <div className="relative w-full max-w-xs right-[-35px]">
               <img
@@ -99,6 +98,7 @@ const NewHero = () => {
               ))}
             </div>
           </div>
+
           <Button
             onClick={handleRedirect}
             className="bg-[#74103e] text-primary-foreground font-semibold px-6 py-2 rounded-lg cursor-pointer transition-transform duration-300 hover:scale-105 mx-auto text-sm mb-10"
@@ -106,19 +106,19 @@ const NewHero = () => {
             VIEW PRODUCTS
           </Button>
 
-          {/* CONTENT SECTION - Below thumbnails for mobile */}
+          {/* CONTENT SECTION  */}
           <div className="flex flex-col space-y-3 mb-4 text-center">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground leading-tight transition-all duration-500 ease-in-out">
               {selectedTitle || currentProduct.title}
             </h1>
 
-            {/* Description - Better constrained and readable */}
+            
             <p className="text-base md:text-lg text-muted-foreground transition-all duration-500 ease-in-out leading-relaxed max-w-md mx-auto">
               {selectedDescription || currentProduct.description}
             </p>
           </div>
 
-          {/* ACCORDION - Bottom for mobile with increased height */}
+          {/* ACCORDION  */}
           <div className="flex gap-1 items-stretch h-36 w-full max-w-xs mx-auto">
             {products.map((product, index) => (
               <motion.button
@@ -234,7 +234,7 @@ const NewHero = () => {
                         <motion.img
                           src={product.mainImage.url}
                           alt={product.mainImage.alt}
-                          className="h-full object-contain -mr-2"
+                          className="h-full object-contain -mr-3"
                           initial={{ scale: 0.8, opacity: 0 }}
                           animate={{ scale: 1, opacity: 1 }}
                           transition={{ duration: 0.5, delay: 0.2 }}

@@ -335,7 +335,7 @@ export const discoverSolutions = [
     benefits2: "PU Adhesive for extra heavy tiles - Adjusts tile deformities, no lippage",
     recommendedSol: "Big Tiles & Stone Fixing?",
      recommendedImg1: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761301915/G-41_jt7rqq.png",
-    recommendedImg2: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1757146320/S-51_yl5yjh.png",
+    recommendedImg2: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761301908/G-51_tghymx.png",
 
     recommendedbutton1slug: "products/deformable-tile-stone",
     recommendedbutton2slug: "products/deformable-tile",
@@ -381,6 +381,7 @@ export const discoverSolutions = [
     benefits: " Strong bond with non-porous surfaces - Accommodates movement and vibration",
     recommendedSol: "Speciality Solutions For Dry Wall Substrates",
     recommendedImg1: "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761301908/G-51_tghymx.png",
+    recommendedbutton1slug: "products/deformable-tile",
   },
 
   {
