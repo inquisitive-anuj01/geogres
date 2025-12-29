@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
+import { optimizeCloudinary } from "../Extra/cloudianry.js";
 
 const ColorVisuals = () => {
   const [selectedColor, setSelectedColor] = useState(null);
@@ -115,7 +116,7 @@ const ColorVisuals = () => {
             <div
               className="absolute inset-0 z-10 w-full h-full"
               style={{
-                backgroundImage: `url(${hexTileImage})`,
+                backgroundImage: `url(${optimizeCloudinary(hexTileImage)})`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",

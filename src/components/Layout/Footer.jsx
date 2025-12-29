@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link, Navigate, useNavigate } from "react-router-dom";
+import { optimizeCloudinary } from "../Extra/cloudianry.js";
 
 const logo =
   "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761286957/grogres_1_et632g.png";
@@ -94,7 +95,7 @@ const Footer = () => {
           className="flex flex-col items-start text-left space-y-6 "
         >
           <img
-            src={logo}
+            src={optimizeCloudinary(logo)}
             alt="GeoGres Logo"
             className="h-25 w-auto cursor-pointer"
           />

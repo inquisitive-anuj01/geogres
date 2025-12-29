@@ -1,10 +1,11 @@
 import React from "react";
 import DomeGallery from "../../../ReactBits/DomeGallery/DomeGallery";
 import { heroProducts } from "../ProductsInfo/heroProducts.js";
+import { optimizeCloudinary } from "../Extra/cloudianry.js";
 
 function Hero() {
   const galleryImages = heroProducts.map(product => ({
-    src: product.image,
+    src: (optimizeCloudinary(product.image)),
     alt: product.name,
     link: product.link
   }));

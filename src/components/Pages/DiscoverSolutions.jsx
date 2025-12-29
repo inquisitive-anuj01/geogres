@@ -2,6 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { discoverSolutions } from "../ProductsInfo/product.js";
+import { optimizeCloudinary } from "../Extra/cloudianry.js";
 
 const splitPoints = (text) => {
   if (!text || typeof text !== "string") return [];
@@ -78,7 +79,7 @@ export default function DiscoverSolutionsDetail() {
             className="bg-[#ccb9ad] rounded-2xl flex items-center justify-center p-6 shadow-md h-[420px]"
           >
             <img
-              src={solution.image}
+              src={optimizeCloudinary(solution.image)}
               alt={solution.name}
               className="max-h-full max-w-full object-contain"
             />
@@ -120,7 +121,7 @@ export default function DiscoverSolutionsDetail() {
               {solution.recommendedImg1 && (
                 <div className="flex flex-col items-center space-y-3">
                   <img
-                    src={solution.recommendedImg1}
+                    src={optimizeCloudinary(solution.recommendedImg1)}
                     alt="recommended-1"
                     className="h-70 object-contain"
                   />
@@ -139,7 +140,7 @@ export default function DiscoverSolutionsDetail() {
               {solution.recommendedImg2 && (
                 <div className="flex flex-col items-center space-y-3">
                   <img
-                    src={solution.recommendedImg2}
+                    src={optimizeCloudinary(solution.recommendedImg2)}
                     alt="recommended-2"
                     className="h-70 object-contain"
                   />

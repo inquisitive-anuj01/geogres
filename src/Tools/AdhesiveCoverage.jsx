@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { optimizeCloudinary } from "@/components/Extra/cloudianry";
 
 const adhesives = [
   {
@@ -214,7 +215,7 @@ const AdhesiveCoverage = () => {
             {selectedAdhesive && area > 0 && !error ? (
               <div className="flex flex-col items-center text-center">
                 <img
-                  src={selectedAdhesive.imgUrl}
+                  src={optimizeCloudinary(selectedAdhesive.imgUrl)}
                   alt={selectedAdhesive.name}
                   className="w-auto h-64 object-contain mb-8 rounded-xl  "
                   onError={(e) => {

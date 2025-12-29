@@ -11,6 +11,7 @@ import {
   BlockAdhesive,
   grout2k,
 } from "../ProductsInfo/product";
+import { optimizeCloudinary } from "../Extra/cloudianry.js";
 
 const splitPoints = (text) => {
   if (!text || typeof text !== "string") return [];
@@ -193,7 +194,7 @@ export default function ProductDetail() {
               className="bg-[#ccb9ad] rounded-2xl flex items-center justify-center p-6 shadow-md h-[420px]"
             >
               <img
-                src={images[activeImage]}
+                src={optimizeCloudinary(images[activeImage])}
                 alt={`${product.name} - ${activeImage + 1}`}
                 className="max-h-full max-w-full object-contain"
               />
@@ -213,7 +214,7 @@ export default function ProductDetail() {
                     aria-label={`thumbnail ${idx + 1}`}
                   >
                     <img
-                      src={img}
+                      src={optimizeCloudinary(img)}
                       alt={`thumb-${idx}`}
                       className="w-full h-full object-contain"
                     />

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react"
 import { Link } from "react-router-dom"
+import { optimizeCloudinary } from "../Extra/cloudianry.js";
 
 const slides = [
   {
@@ -124,7 +125,7 @@ function MobileCarousel() {
                 </Link>
 
                 <img
-                  src={slides[currentIndex].image || "/placeholder.svg"}
+                  src={(optimizeCloudinary(slides[currentIndex].image)) || "/placeholder.svg"}
                   alt={slides[currentIndex].title}
                   className="w-full h-50 object-contain mt-4"
                 />
@@ -239,7 +240,7 @@ function DesktopCarousel() {
                     )}
 
                     <img
-                      src={slide.image || "/placeholder.svg"}
+                      src={optimizeCloudinary(slide.image) || "/placeholder.svg"}
                       alt={slide.title}
                       className="w-full h-52 object-contain mt-6"
                     />

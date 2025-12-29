@@ -8,6 +8,7 @@ import {
   groutHardner,
 } from "../ProductsInfo/product";
 import { Palette, Package, Hourglass } from "lucide-react";
+import { optimizeCloudinary } from "../Extra/cloudianry.js";
 
 const EpoxyGrout = () => {
   // Combine all grout products
@@ -53,7 +54,7 @@ const EpoxyGrout = () => {
                 {/* Image */}
                 <div className="relative h-56 flex items-center justify-center bg-[#ccb9ad] overflow-hidden">
                   <motion.img
-                    src={product.image}
+                    src={optimizeCloudinary(product.image)}
                     alt={product.name}
                     className="h-full object-contain"
                     whileHover={{ scale: 1.05 }}

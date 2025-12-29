@@ -1,6 +1,7 @@
 // src/components/ProductInfo.jsx
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { optimizeCloudinary } from "../Extra/cloudianry.js";
 
 const products = [
   {
@@ -91,7 +92,7 @@ const ProductInfo = () => {
               {/* Image */}
               <div className="h-48 w-full overflow-hidden">
                 <img
-                  src={product.img}
+                  src={optimizeCloudinary(product.img)}
                   alt={product.name}
                   className="w-full h-full object-contain transition-transform duration-900 group-hover:scale-75 "
                 />

@@ -6,6 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Button } from "@/components/ui/button"
 import { Search } from "lucide-react"
 import { useNavigate } from "react-router-dom"
+import { optimizeCloudinary } from "@/components/Extra/cloudianry";
 
 const jointFillerProducts = [
   {
@@ -401,7 +402,7 @@ function JointFillersCoverage() {
                             className="text-center p-2 bg-[#ccb9ad] rounded-lg hover:bg-[#faebe3] transition-colors duration-200"
                           >
                             <img
-                              src={product.image || "/placeholder.svg"}
+                              src={optimizeCloudinary(product.image) || "/placeholder.svg"}
                               alt={product.name}
                               className="w-50 h-50 mx-auto mb-2 object-contain"
                             />

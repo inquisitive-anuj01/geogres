@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import * as htmlToImage from "html-to-image";
+import { optimizeCloudinary } from "@/components/Extra/cloudianry";
 
 const jointColors = [
   { name: "BRIGHT WHITE 24", hex: "#FFFFFF" },
@@ -535,7 +536,7 @@ const JointFillersVisuals = () => {
                       }`}
                     >
                       <img
-                        src={sparkle.url}
+                        src={optimizeCloudinary(sparkle.url)}
                         alt={`${sparkle.name} Sparkle`}
                         crossOrigin="anonymous"
                         className="w-full h-full object-cover opacity-50"

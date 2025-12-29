@@ -1,4 +1,5 @@
 import React from "react"
+import { optimizeCloudinary } from "../Extra/cloudianry.js";
 
 const bgImge = "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1758268758/senzo_background_ua7v6a.png";
 
@@ -17,7 +18,7 @@ function Certification() {
 
 
   return (
-    <div className=" w-full py-25   " style={{ backgroundImage: `url(${bgImge})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <div className=" w-full py-25   " style={{ backgroundImage: `url(${optimizeCloudinary(bgImge)})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
 
       <div className="flex justify-center items-center">
         <div className="overflow-hidden w-full ">
@@ -25,7 +26,7 @@ function Certification() {
             {duplicateLogos.map((logo, index) => (
               <div key={`first-${index}`} className="flex-shrink-0 mx-8">
                 <img
-                  src={logo || "/placeholder.svg"}
+                  src={optimizeCloudinary(logo) || "/placeholder.svg"}
                   alt={`Certification logo ${index + 1}`}
                   className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
                 />
@@ -34,7 +35,7 @@ function Certification() {
             {duplicateLogos.map((logo, index) => (
               <div key={`second-${index}`} className="flex-shrink-0 mx-8">
                 <img
-                  src={logo || "/placeholder.svg"}
+                  src={optimizeCloudinary(logo) || "/placeholder.svg"}
                   alt={`Certification logo ${index + 1}`}
                   className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
                 />

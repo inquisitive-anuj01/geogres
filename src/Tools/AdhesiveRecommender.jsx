@@ -1,5 +1,6 @@
 import { useState, useRef } from "react"
 import { useNavigate } from "react-router-dom"
+import { optimizeCloudinary } from "@/components/Extra/cloudianry";
 
 const tileAdhesiveProducts = [
   {
@@ -650,7 +651,7 @@ function AdhesiveSelector() {
                     <div className="p-6">
                       <div className="w-40 h-40 bg-gray-200 rounded-lg mx-auto mb-4 flex items-center justify-center text-xs text-gray-500">
                         <img
-                          src={product.image || "/placeholder.svg"}
+                          src={optimizeCloudinary(product.image) || "/placeholder.svg"}
                           alt={product.name}
                           className="max-w-full max-h-full object-contain"
                         />

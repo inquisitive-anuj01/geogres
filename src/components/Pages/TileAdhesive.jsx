@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { tileAdhesive } from "../ProductsInfo/product";
 import { Package, Palette, Award } from "lucide-react";
+import { optimizeCloudinary } from "../Extra/cloudianry.js";
 
 const TileAdhesive = () => {
   return (
@@ -39,7 +40,7 @@ const TileAdhesive = () => {
                 {/* Image */}
                 <div className="relative h-56 flex items-center justify-center bg-[#ccb9ad] overflow-hidden">
                   <motion.img
-                    src={product.image}
+                    src={optimizeCloudinary(product.image)}
                     alt={product.name}
                     className="h-full object-contain"
                     whileHover={{ scale: 1.05 }}

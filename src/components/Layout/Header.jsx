@@ -11,6 +11,7 @@ import {
   FiGrid,
 } from "react-icons/fi";
 import { Link, useNavigate } from "react-router-dom";
+import { optimizeCloudinary } from "../Extra/cloudianry.js";
 
 const logo =
   "https://res.cloudinary.com/dzvwqhzgf/image/upload/v1761286957/grogres_1_et632g.png";
@@ -217,7 +218,7 @@ const Header = () => {
                   onClick={() => navigate("/")}
                 >
                   <img
-                    src={logo || "/placeholder.svg"}
+                    src={optimizeCloudinary(logo)|| "/placeholder.svg"}
                     alt="GeoGres Logo"
                     className="h-20 w-auto"
                   />
@@ -298,7 +299,7 @@ const Header = () => {
                               className="text-center p-3 rounded-lg hover:bg-white cursor-pointer transition-colors border hover:border-[#74103e]"
                             >
                               <img
-                                src={product.image || "/placeholder.svg"}
+                                src={optimizeCloudinary(product.image) || "/placeholder.svg"}
                                 alt={product.name}
                                 className="w-20 h-20 mx-auto mb-2 object-contain"
                               />
@@ -352,7 +353,7 @@ const Header = () => {
                           className="text-center p-3 rounded-lg hover:bg-white cursor-pointer transition-colors border hover:border-[#74103e]"
                         >
                           <img
-                            src={solution.image || "/placeholder.svg"}
+                            src={optimizeCloudinary(solution.image) || "/placeholder.svg"}
                             alt={solution.name}
                             className="w-20 h-20 mx-auto mb-2 object-contain"
                           />
@@ -467,7 +468,7 @@ const Header = () => {
             >
               <div className="flex items-center justify-between p-4 border-b border-[#faebe3] py-10">
                 <img
-                  src={logo || "/placeholder.svg"}
+                  src={optimizeCloudinary(logo) || "/placeholder.svg"}
                   alt="GeoGres Logo"
                   className="h-20 w-auto"
                 />

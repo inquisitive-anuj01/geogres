@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { products } from "../ProductsInfo/heroProducts";
+import { optimizeCloudinary } from "../Extra/cloudianry.js";
 
 const NewHero = () => {
   const navigate = useNavigate();
@@ -65,7 +66,7 @@ const NewHero = () => {
             <div className="relative w-full max-w-xs right-[-35px]">
               <img
                 key={imageKey}
-                src={selectedImage.url || "/placeholder.svg"}
+                src={optimizeCloudinary(selectedImage.url) || "/placeholder.svg"}
                 alt={selectedImage.alt}
                 className="w-full h-auto object-contain transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] transform"
                 style={{
@@ -90,7 +91,7 @@ const NewHero = () => {
                   } ${isTransitioning ? "pointer-events-none" : ""}`}
                 >
                   <img
-                    src={thumb.url || "/placeholder.svg"}
+                    src={optimizeCloudinary(thumb.url) || "/placeholder.svg"}
                     alt={thumb.alt}
                     className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 cursor-pointer"
                   />
@@ -146,7 +147,7 @@ const NewHero = () => {
                     transition={{ duration: 0.4, delay: 0.2 }}
                   >
                     <motion.img
-                      src={product.mainImage.url}
+                      src={optimizeCloudinary(product.mainImage.url)}
                       alt={product.mainImage.alt}
                       className="h-full object-contain -mr-1"
                       initial={{ scale: 0.8, opacity: 0 }}
@@ -232,7 +233,7 @@ const NewHero = () => {
                         transition={{ duration: 0.4, delay: 0.2 }}
                       >
                         <motion.img
-                          src={product.mainImage.url}
+                          src={optimizeCloudinary(product.mainImage.url)}
                           alt={product.mainImage.alt}
                           className="h-full object-contain -mr-3"
                           initial={{ scale: 0.8, opacity: 0 }}
@@ -280,7 +281,7 @@ const NewHero = () => {
                     } ${isTransitioning ? "pointer-events-none" : ""}`}
                   >
                     <img
-                      src={thumb.url || "/placeholder.svg"}
+                      src={optimizeCloudinary(thumb.url) || "/placeholder.svg"}
                       alt={thumb.alt}
                       className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 cursor-pointer"
                     />
@@ -295,7 +296,7 @@ const NewHero = () => {
             <div className="relative">
               <img
                 key={imageKey}
-                src={selectedImage.url || "/placeholder.svg"}
+                src={optimizeCloudinary(selectedImage.url) || "/placeholder.svg"}
                 alt={selectedImage.alt}
                 className="max-w-full h-auto object-contain transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] transform"
                 style={{
